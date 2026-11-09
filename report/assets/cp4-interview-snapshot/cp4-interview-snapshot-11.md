@@ -1,0 +1,13 @@
+# Snapshot khảo sát #11
+
+- Nguồn: [CP4_khao_sat.csv](../cp4-khao-sat.csv), bản ghi 11 (dòng 12 tính cả tiêu đề).
+- Mốc thời gian trong CSV: 9/11/2026 12:42
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Sinh viên vừa học vừa làm |
+| Câu nói đáng nhớ nhất (nguyên văn) | Nộp đơn xin nghỉ phép việc làm thêm để tập trung ôn thi học kỳ |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Không nêu tình huống chọn chưa phù hợp. Tình huống chọn task gần nhất: Nộp đơn xin nghỉ phép việc làm thêm để tập trung ôn thi học kỳ |
+| Hiện đang xử lý bằng cách nào (workaround)? | Ghi vào sổ tay hoặc ứng dụng Notes |
+| Mất bao lâu, bao lần? | Cân nhắc: 1–5 phút; khó khăn trong 7 ngày: 1 lần |
+| Insight / opportunity rút ra | Mẫu có tín hiệu phản bác: không ghi nhận khó khăn trong 7 ngày hoặc không có hậu quả đáng kể; cần phân biệt nhóm này với nhóm gặp khó khăn khi ưu tiên task. |
