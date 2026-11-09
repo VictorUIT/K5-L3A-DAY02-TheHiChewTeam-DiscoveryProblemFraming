@@ -97,49 +97,56 @@ B đạt 33/35 điểm, đồng hạng cao nhất với E. Nhóm chọn tập tr
 
 ### 3.1. Assumption Map
 
-| # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
+| # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Bằng chứng ban đầu (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Người dùng khó chọn task trước. | Value | 5 | 1 | Cao |
+| 2 | Chọn task chưa phù hợp gây hậu quả. | Value | 5 | 1 | Cao |
+| 3 | Chỉ sắp xếp theo deadline chưa đủ. | Value | 5 | 1 | Cao |
+| 4 | Có đủ dữ liệu đầu vào để xếp ưu tiên. | Feasibility | 5 | 1 | Cao |
+| 5 | Người dùng sẵn sàng tham khảo đề xuất. | Usability | 4 | 1 | Cần kiểm |
+| 6 | Người dùng chấp nhận cung cấp dữ liệu. | Viability | 5 | 1 | Cần kiểm |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: 1–3 qua tần suất khó khăn, thời gian cân nhắc, hậu quả và cách quản lý hiện tại. Giả định 4–6 được đối chiếu với câu trả lời hiện có để xác định phần còn thiếu bằng chứng.
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
-
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
-
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+Cách đã dùng: Khảo sát, 27 phản hồi trong [CSV do nhóm cung cấp](../assets/cp4-khao-sat.csv). Mốc thời gian trong file: 09/11/2026, từ 11:04 đến 15:29. Xem [27 snapshot theo mẫu](../assets/cp4-interview-snapshot/README.md).
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Câu 5–6: khó khăn và thời gian cân nhắc | 27 phản hồi | 22/27 ghi nhận khó khăn ít nhất 1 lần trong 7 ngày; 13/27 gặp từ 2 lần; 12/27 cân nhắc từ 6 phút trở lên. | 5/27 không gặp khó khăn; 7/27 cân nhắc dưới 1 phút. |
+| Câu 7–8: hậu quả và tình huống cụ thể | 27 phản hồi | 13/27 chọn ít nhất một hậu quả ở câu 7; 14/27 kể tình huống chọn task chưa phù hợp ở câu 8. | 14/27 chọn không gây khó khăn đáng kể ở câu 7. Câu 8 không giới hạn cùng kỳ 7 ngày; không cộng hai nhóm thành số trường hợp độc lập. |
+| Câu 9–10: cách quản lý và mức độ đáp ứng | 27 phản hồi; 7 có dùng sắp xếp theo deadline | Trong 7 phản hồi có dùng deadline, 4 vẫn gặp khó khăn; 11/27 đánh giá cách hiện tại chỉ đáp ứng một phần hoặc hầu như không đáp ứng. | 3/7 phản hồi có dùng deadline không gặp khó khăn; 16/27 cho rằng cách hiện tại đáp ứng phần lớn hoặc hoàn toàn. |
+
+Đối chiếu bằng chứng theo giả định:
+
+| Giả định | Bằng chứng trong CSV / snapshot | Kết luận và phần cần kiểm tiếp |
+|---|---|---|
+| **1. Khó chọn task trước** | Câu 5: 22/27 có khó khăn; câu 6: 12/27 cân nhắc ≥6 phút. Ví dụ [02](../assets/cp4-interview-snapshot/cp4-interview-snapshot-02.md), [07](../assets/cp4-interview-snapshot/cp4-interview-snapshot-07.md). Phản bác: [03](../assets/cp4-interview-snapshot/cp4-interview-snapshot-03.md), [04](../assets/cp4-interview-snapshot/cp4-interview-snapshot-04.md) không gặp khó khăn. | **Được hỗ trợ ban đầu trong mẫu**, không đúng với mọi người. Tập trung vào nhóm gặp khó khăn lặp lại thay vì tất cả người có nhiều task. |
+| **2. Chọn chưa phù hợp gây hậu quả** | Câu 7: 13/27 ghi nhận hậu quả; câu 8: 14/27 có tình huống. [02](../assets/cp4-interview-snapshot/cp4-interview-snapshot-02.md) chọn bài dễ trước rồi phải thức đêm; [18](../assets/cp4-interview-snapshot/cp4-interview-snapshot-18.md) kể trễ bàn giao 2 ngày. | **Có bằng chứng tự thuật**, chưa chứng minh quan hệ nhân quả. 14/27 không ghi nhận hậu quả đáng kể ở câu 7; cần phân biệt ưu tiên sai với thiếu thời gian, phân tâm hoặc ước lượng sai. |
+| **3. Chỉ deadline chưa đủ** | Câu 9 kết hợp câu 5: 4/7 phản hồi có dùng deadline vẫn gặp khó khăn ([05](../assets/cp4-interview-snapshot/cp4-interview-snapshot-05.md), [14](../assets/cp4-interview-snapshot/cp4-interview-snapshot-14.md), [17](../assets/cp4-interview-snapshot/cp4-interview-snapshot-17.md), [22](../assets/cp4-interview-snapshot/cp4-interview-snapshot-22.md)); 3/7 không gặp. | **Hỗ trợ một phần**. Các phản hồi còn dùng cách khác, nên chưa kiểm nghiệm riêng “chỉ deadline”. Cần so sánh cùng danh sách task giữa xếp theo deadline và xếp thêm độ quan trọng, thời lượng, phụ thuộc. |
+| **4. Đủ dữ liệu đầu vào** | Câu 11: 25/27 muốn biết deadline, 22/27 độ quan trọng, 8/27 thời lượng, 5/27 phụ thuộc. CSV không chứa danh sách task hiện tại với giá trị cụ thể của từng trường. | **Chưa xác nhận**. Mong muốn có thông tin khác với dữ liệu đã sẵn có. Cần kiểm tra trên danh sách task thật xem trường nào có, thiếu và mất bao lâu để bổ sung. |
+| **5. Sẵn sàng tham khảo đề xuất** | Câu 12 có mong muốn được hỗ trợ; bản ghi 21 trong [CSV](../assets/cp4-khao-sat.csv) muốn phương pháp quản lý phù hợp. Chưa có câu hỏi trực tiếp hoặc thử nghiệm sử dụng đề xuất xếp ưu tiên. | **Chưa kiểm chứng trực tiếp**. Cho người dùng xem thứ tự đề xuất trên task của họ, ghi nhận chọn dùng, sửa hay bỏ và lý do; không suy từ mong muốn sang hành vi chấp nhận. |
+| **6. Chấp nhận cung cấp dữ liệu** | CSV có phản hồi về trải nghiệm, nhưng không hỏi chấp nhận nhập task, chia sẻ lịch/tin nhắn, kết nối tài khoản hay giới hạn dữ liệu. | **Chưa kiểm chứng**. Cần làm rõ dữ liệu tối thiểu, phạm vi chia sẻ và thử việc nhập/chọn task chủ động; trả lời khảo sát không đồng nghĩa chấp nhận cấp quyền truy cập. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
+
+- Thu hẹp từ “mọi người có nhiều task” sang người quản lý nhiều nhiệm vụ và gặp khó khăn lặp lại khi chọn việc tiếp theo; 5/27 không gặp khó khăn và 16/27 đã thấy cách hiện tại đáp ứng phần lớn hoặc hoàn toàn.
+- Tập trung vào bước chọn task kế tiếp, với thời gian cân nhắc và tình huống chọn chưa phù hợp; tách khỏi bài toán tổng hợp mọi nguồn tin, duy trì động lực và ước lượng tiến độ.
+- Giữ giả định “deadline chưa đủ” ở mức cần so sánh, chưa mặc định phải dùng AI. Chưa coi dữ liệu task đầy đủ, việc chấp nhận đề xuất và chấp nhận chia sẻ dữ liệu là đã được xác nhận.
+
+Problem sau đối chiếu: Người quản lý nhiều nhiệm vụ, thường xuyên phân vân khi chọn việc tiếp theo, cần xác định task phù hợp với deadline và độ quan trọng để giảm thời gian cân nhắc và hạn chế những lần lựa chọn dẫn đến dồn việc hoặc trễ hạn.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Ma trận Eisenhower — No AI | [Asana: Eisenhower Matrix](https://asana.com/resources/eisenhower-matrix) | Phân loại task theo khẩn cấp và quan trọng thành bốn nhóm hành động. | Quy tắc minh bạch, người dùng tự đánh giá. | Nhận định của nhóm: vẫn cần tự xác định mức độ quan trọng và xử lý thứ tự giữa các task trong cùng một nhóm. | Dùng làm phương án đơn giản để so sánh trước khi thêm AI. |
+| Todoist Filters — Rule | [Todoist: Introduction to filters](https://www.todoist.com/help/todoist/features/introduction-to-filters-V98wIH) | Lọc danh sách theo ngày, mức ưu tiên, nhãn và dự án để thu hẹp task cần xem. | Có thể kết hợp nhiều điều kiện theo quy tắc. | Nhận định của nhóm: bộ lọc chỉ hữu ích khi các thuộc tính task được điền; chưa chứng minh giảm thời gian chọn task cho nhóm người dùng này. | Thử kết hợp ngày và mức ưu tiên; ghi trường dữ liệu thiếu và thời gian bổ sung. |
+| Motion Auto-scheduling | [Motion: Auto-scheduling](https://www.usemotion.com/help/time-management/auto-scheduling) | Xếp task vào lịch theo thời lượng, deadline, mức ưu tiên và thời gian trống; điều chỉnh khi lịch thay đổi. | Đã có chức năng kết hợp nhiều yếu tố và tự sắp lịch. | Theo tài liệu, hard deadline có thể khiến task được xếp ngoài giờ làm; nhận định của nhóm: đầu vào thiếu hoặc sai cần được thử trước khi dựa vào lịch đề xuất. | Nhu cầu đã có công cụ xử lý một phần; so sánh với cách có sẵn, giới hạn giờ làm và cho người dùng kiểm tra. |
+
 
 ---
 
@@ -318,4 +325,8 @@ Vì sao:
 
 ## 10. Tài liệu tham khảo
 
--
+- [CSV khảo sát do nhóm cung cấp — 27 phản hồi](../assets/cp4-khao-sat.csv).
+- [Danh sách 27 snapshot khảo sát](../assets/cp4-interview-snapshot/README.md).
+- [Asana — The Eisenhower Matrix](https://asana.com/resources/eisenhower-matrix), truy cập 09/11/2026.
+- [Todoist — Introduction to filters](https://www.todoist.com/help/todoist/features/introduction-to-filters-V98wIH), truy cập 09/11/2026.
+- [Motion — Auto-scheduling](https://www.usemotion.com/help/time-management/auto-scheduling), truy cập 09/11/2026.
