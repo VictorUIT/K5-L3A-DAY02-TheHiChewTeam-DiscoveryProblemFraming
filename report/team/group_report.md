@@ -203,13 +203,127 @@ Dữ liệu tự thuật đã ghi nhận tình trạng quên nhiệm vụ khi ch
 
 Giới hạn bằng chứng: Hiện chưa có số liệu bấm giờ đáng tin cậy cho từng bước và tổng thời gian của quy trình. Chưa đủ cơ sở kết luận bước lựa chọn ưu tiên là bước mất nhiều phút nhất hoặc là nguyên nhân trực tiếp của mọi trường hợp trễ hạn.
 
-### 4.2. Quy trình tương lai
+## **4.2. Quy trình tương lai (To-Be)**
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+### **Mục tiêu cải tiến**
 
-```text
+Xây dựng một quy trình hỗ trợ người dùng quản lý nhiều nhiệm vụ song song và xác định công việc nên ưu tiên thực hiện.
 
+Khác với cách chỉ sắp xếp task theo deadline, quy trình đề xuất sử dụng **AI để phân tích tổng hợp nhiều yếu tố**, nhận diện các xung đột về thời gian, đánh giá tính khẩn cấp và mức độ quan trọng, từ đó gợi ý thứ tự thực hiện phù hợp với hoàn cảnh của người dùng.
+
+Hệ thống đóng vai trò hỗ trợ ra quyết định. Người dùng vẫn giữ quyền lựa chọn, điều chỉnh và xác nhận kế hoạch cuối cùng.
+
+### **Sơ đồ quy trình tương lai**
+
+```mermaid
+flowchart TD
+    A["1. CON NGƯỜI: Nhập hoặc cập nhật task<br/>Deadline, mức quan trọng, tiến độ"]
+    B["2. RULE: Kiểm tra và chuẩn hóa dữ liệu"]
+    C{"Dữ liệu đủ<br/>để đánh giá?"}
+    D["3. RULE: Tổng hợp danh sách<br/>task cần ưu tiên"]
+    E["4. AI: Phân tích và đề xuất<br/>thứ tự ưu tiên, kèm lý do"]
+    F{"Đề xuất AI<br/>có thể sử dụng?"}
+    G["5. CON NGƯỜI: Xem xét,<br/>điều chỉnh và quyết định"]
+    I["FALLBACK: Tự sắp xếp task<br/>theo cách thủ công"]
+    J["6. RULE + CON NGƯỜI:<br/>Lưu kế hoạch, cập nhật tiến độ"]
+    K{"Có task mới<br/>hoặc thay đổi?"}
+    L(["Tiếp tục theo dõi kế hoạch"])
+
+    A --> B --> C
+    C -->|Thiếu| A
+    C -->|Đủ| D --> E --> F
+    F -->|Có| G
+    F -->|Không| I --> G
+    G -->|Xác nhận| J
+    G -->|Yêu cầu phân tích lại| E
+    J --> K
+    K -->|Có| A
+    K -->|Không| L
+
+    classDef ai fill:#e6f0ff,stroke:#4079c8,color:#163f77
+    classDef human fill:#e7f5ec,stroke:#478d62,color:#24593a
+    classDef fallback fill:#fff0d9,stroke:#c57b13,color:#633d0b
+    class E ai
+    class A,G human
+    class I fallback
 ```
+
+Khi xuất hiện nhiệm vụ mới hoặc công việc khẩn cấp, người dùng cập nhật thông tin và yêu cầu hệ thống đánh giá lại thứ tự ưu tiên.
+
+### **Bảng mô tả quy trình tương lai**
+
+| Bước | Actor | Input | Output | Thời gian kỳ vọng | Phương thức |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 1 | Người dùng | Tên nhiệm vụ, deadline, mức độ quan trọng, thời gian dự kiến, trạng thái, yêu cầu | Dữ liệu nhiệm vụ được ghi nhận | Chưa xác định | Con người |
+| 2 | Hệ thống | Dữ liệu nhiệm vụ | Dữ liệu đã được kiểm tra hoặc cảnh báo thiếu thông tin | Chưa xác định | Rule |
+| 3 | Hệ thống | Danh sách nhiệm vụ và trạng thái hiện tại | Danh sách task cần cân nhắc ưu tiên | Chưa xác định | Rule |
+| 4 | AI | Danh sách task đã chuẩn hóa, deadline, độ quan trọng, thời lượng, tiến độ và ràng buộc do người dùng cung cấp | Thứ tự ưu tiên đề xuất, lý do, dữ liệu còn thiếu và điểm xung đột cần chú ý | Chưa đo; cần thử nghiệm | AI hỗ trợ |
+| 5 | Người dùng | Đề xuất, lý do và cảnh báo thiếu dữ liệu | Thứ tự ưu tiên được xác nhận, chỉnh sửa hoặc từ chối | Chưa đo; cần thử nghiệm | Con người (HITL) |
+| 6 | Hệ thống và người dùng | Phương án đã xác nhận, cập nhật tiến độ hoặc task mới | Kế hoạch và trạng thái mới nhất | Chưa đo; cần thử nghiệm | Rule + con người |
+
+Khảo sát CP4 ghi nhận deadline và mức độ quan trọng là hai trường người trả lời thường muốn biết (25/27 và 22/27); thời lượng và phụ thuộc được chọn ít hơn (8/27 và 5/27). Đây là thông tin người dùng muốn có, không chứng minh họ đã có sẵn dữ liệu đó. Bản thử nghiệm cần để người dùng nhập/xác nhận task; chưa giả định hệ thống tự đọc Zalo, email hay công cụ bên ngoài.
+
+### **Vai trò của AI trong quy trình**
+
+AI là thành phần trung tâm của **bước phân tích và đề xuất thứ tự ưu tiên**.
+
+AI dự kiến thực hiện các nhiệm vụ:
+
+1. Phân tích thời hạn, mức độ quan trọng, thời gian dự kiến và tiến độ của các task.  
+2. Xem xét sự phụ thuộc giữa các nhiệm vụ, các công việc đột xuất và những ràng buộc người dùng cung cấp.  
+3. Phát hiện những trường hợp có nhiều nhiệm vụ cùng khẩn cấp hoặc có nguy cơ xung đột thời gian.  
+4. Đề xuất thứ tự thực hiện và giải thích lý do ưu tiên.  
+5. Đánh giá lại thứ tự ưu tiên khi người dùng bổ sung thông tin hoặc thay đổi điều kiện thực hiện.
+
+Nhóm định hướng sử dụng AI vì muốn hệ thống hỗ trợ đánh giá nhiều yếu tố theo ngữ cảnh, thay vì chỉ sắp xếp cứng theo một tiêu chí như deadline.
+
+Đây là **giả thuyết thiết kế của nhóm**, chưa phải bằng chứng rằng AI nhất thiết hiệu quả hơn mọi phương pháp dựa trên quy tắc. Mức can thiệp cuối cùng sẽ được đối chiếu tại CP6.
+
+### **Phân chia vai trò**
+
+**Rule:**
+
+* Kiểm tra các trường dữ liệu bắt buộc.  
+* Phát hiện dữ liệu không hợp lệ.  
+* Lọc và tổng hợp trạng thái nhiệm vụ.  
+* Lưu, cập nhật và hiển thị thông tin đã xác nhận.
+
+**AI:**
+
+* Phân tích các yếu tố ưu tiên và ngữ cảnh liên quan.  
+* Đề xuất thứ tự thực hiện.  
+* Giải thích các tiêu chí dẫn đến đề xuất.  
+* Đánh giá lại khi có sự thay đổi.
+
+**Con người:**
+
+* Cung cấp và xác nhận dữ liệu đầu vào.  
+* Xác định những ràng buộc quan trọng.  
+* Xem xét, lựa chọn hoặc điều chỉnh đề xuất.  
+* Quyết định kế hoạch cuối cùng và cập nhật tiến độ.
+
+### **Boundary – Giới hạn của hệ thống**
+
+* AI không tự quyết định nhiệm vụ cuối cùng mà người dùng bắt buộc phải thực hiện.  
+* AI không tự ý thay đổi deadline, mức độ quan trọng hoặc trạng thái hoàn thành của task.  
+* AI không tạo thêm nhiệm vụ hay tự xác nhận thông tin chưa được cung cấp.  
+* AI phải chỉ rõ khi đề xuất dựa trên dữ liệu thiếu hoặc chưa chắc chắn.  
+* Người dùng phải có khả năng xem lý do đề xuất và chỉnh sửa thứ tự thủ công.  
+* AI chỉ được sử dụng dữ liệu trong phạm vi đã được người dùng cấp quyền.  
+* Hệ thống không tự gửi thông báo, thay đổi lịch hoặc tác động đến công cụ quản lý bên ngoài nếu chưa có sự cho phép phù hợp.
+
+### **Phương án quay về (Fallback)**
+
+Khi AI đưa ra đề xuất không phù hợp, thiếu ngữ cảnh hoặc không hoạt động, người dùng có thể:
+
+1. Xem lại các thông tin được sử dụng để đánh giá.  
+2. Bổ sung hoặc chỉnh sửa deadline, mức độ quan trọng và các ràng buộc.  
+3. Yêu cầu AI đánh giá lại.  
+4. Bỏ qua đề xuất và tự kéo thả, sắp xếp danh sách nhiệm vụ.  
+5. Tiếp tục sử dụng các chức năng quản lý task cơ bản mà không phụ thuộc vào AI.
+
+Các phương án đề xuất không tự động thay thế lựa chọn trước đó nếu người dùng chưa xác nhận.
+
 
 ### 4.3. Before / after
 
