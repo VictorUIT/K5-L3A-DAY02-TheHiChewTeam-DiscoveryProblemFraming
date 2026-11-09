@@ -1,4 +1,4 @@
-# Báo cáo cá nhân — MSSV_HoTen
+# Báo cáo cá nhân — 2A202603601_VuDucThang
 
 > Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
 > Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
@@ -124,16 +124,16 @@ Tìm kiếm thông tin->Mở nhiều nguồn tài liệu->Kiểm tra tác giả 
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Tôi chuẩn bị và chọn Card #2 về việc theo dõi chi tiêu cá nhân để pitch. | Đưa vào thảo luận nhóm một candidate có quy trình ghi nhận, phân loại và tổng hợp giao dịch. |
+| Phản biện bài của bạn khác | Tôi đặt câu hỏi về bước gây tốn thời gian nhất, cách người đó đang xử lý và liệu một checklist hoặc bảng tính có đủ giải quyết vấn đề hay không. | Giúp cuộc thảo luận tập trung vào hành vi đã xảy ra, bottleneck và phương án đơn giản trước khi nghĩ đến AI. |
+| Nhận phản biện | Tôi nhận câu hỏi: “Ghi chép theo mẫu có đủ để kiểm soát chi tiêu không?” | Tôi rà lại actor, bottleneck và metric; đồng thời ghi rõ các số liệu ước lượng cần được kiểm chứng bằng dữ liệu giao dịch thực tế. |
+| Gom cluster / cây OST | Tôi chưa có ghi chép riêng về phần này trong báo cáo nhóm. | Không tự nhận thêm đóng góp chưa được ghi lại; cần bổ sung tên cluster và nhánh opportunity sau khi nhóm chốt biên bản CP3. |
+| Chọn candidate problem | Tôi đề xuất Card #2 vì muốn hiểu khoản nào đang vượt mức và quản lý chi tiêu hợp lý hơn. | Candidate cần được kiểm chứng bằng dữ liệu giao dịch thực tế trước khi nhóm chốt. |
+| Kiểm chứng / research | Chưa có interview, survey hoặc research được ghi nhận trong repo tại thời điểm viết. | Không tự đưa kết quả khi chưa có nguồn hoặc dữ liệu thật. |
+| Quy trình nhóm | Tôi đã mô tả quy trình hiện tại gồm phát sinh giao dịch, ghi nhận, nhập dữ liệu, phân loại, tổng hợp, so sánh và tìm nguyên nhân. | Làm rõ bottleneck nằm ở ghi chép và phân loại thủ công. |
+| Problem Statement | Tôi chưa tham gia viết bản nhóm vì `group_report.md` chưa có nội dung CP5. | Chưa có kết luận để ghi; cần cập nhật sau khi nhóm kiểm chứng và chốt candidate. |
+| Mức can thiệp AI | Tôi mới nêu giả thuyết AI có thể hỗ trợ phân loại giao dịch và phát hiện bất thường. | Chưa đủ bằng chứng để chốt Workflow hoặc Agent; cần thử Rule trước. |
+| Quyết định | Tôi chưa tham gia chốt quyết định cuối vì nhóm chưa cập nhật CP6 trong repo. | Chưa có quyết định Go / Not Yet / No-Go để ghi nhận. |
 
 ---
 
@@ -141,12 +141,12 @@ Tìm kiếm thông tin->Mở nhiều nguồn tài liệu->Kiểm tra tác giả 
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Sau khi tự scan, tôi nhờ AI gợi ý thêm các vấn đề đời sống theo 4 lăng kính. | Giúp mở rộng danh sách candidate và diễn đạt một số ý theo Job Story. | Một số gợi ý quá rộng hoặc nhảy thẳng sang giải pháp, chưa có bằng chứng hành vi. | Tôi chỉ giữ các ý có quy trình cụ thể, bỏ ý quá rộng và ghi rõ số liệu cần kiểm chứng; không coi gợi ý của AI là bằng chứng. |
+| CP2 Problem Card | Nhờ AI phản biện ba card theo vai product manager hoài nghi. | Giúp phát hiện actor quá rộng, bottleneck chưa cụ thể và metric thiếu baseline, target hoặc cách đo. | AI có xu hướng chấp nhận số liệu ước lượng và đề xuất AI trước khi xác định phương án đơn giản hơn. | Tôi đánh dấu các số liệu 20–40 phút, 30–60 phút và 50–100 phút là giả định; bổ sung yêu cầu bấm giờ, đếm giao dịch và kiểm tra thủ công. |
+| CP4 Research | Chưa dùng AI để viết kết quả research hoặc thay thế việc tự mở và kiểm tra nguồn. | — | — | Không ghi claim hoặc nguồn khi chưa tự kiểm chứng. |
+| CP5 Quy trình | Chưa dùng AI để viết quy trình nhóm. | — | — | Tự mô tả các bước hiện tại từ trải nghiệm và giữ bottleneck ở bước ghi chép, phân loại. |
+| CP5–6 Problem Statement | Chưa dùng AI vì nhóm chưa cập nhật Problem Statement trong repo. | — | — | Chờ dữ liệu kiểm chứng trước khi viết kết luận. |
+| CP6 Mức can thiệp / quyết định | Chưa dùng AI vì nhóm chưa chốt candidate, mức can thiệp và quyết định. | — | — | Dự kiến so sánh No AI, Rule và Workflow trước khi cân nhắc mức cao hơn. |
 
 ---
 
