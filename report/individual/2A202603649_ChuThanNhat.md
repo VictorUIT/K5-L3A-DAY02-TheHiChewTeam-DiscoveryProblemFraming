@@ -17,6 +17,7 @@
 ## 2. Scan problem (CP1)
 
 Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng hợp nhiều thông tin** · **Pain từ người khác**.
+
 Problem: quản lý kênh youtube nhiều kênh mất nhiều thời gian và khó mở rộng
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
@@ -111,9 +112,9 @@ Quy trình nháp hiện tại:
 
 ### Card muốn pitch nhất
 
-- Card số:
-- Vì sao:
-- Câu hỏi muốn nhóm phản biện:
+- Card số: 1
+- Vì sao: Việc nghiên cứu thị trường rất quan trọng, giống như con thuyền được chỉ đúng hướng.
+- Câu hỏi muốn nhóm phản biện: Làm thế nào để xác định ta có nên follow theo 1 kênh hay không.
 
 ### AI đã phản biện card thế nào
 
@@ -196,5 +197,8 @@ Bài toán của nhóm tôi là hỗ trợ người dùng gặp khó khăn khi p
 ---
 
 ## 7. Tài liệu tham khảo
+- Google PAIR. (2021). People + AI Guidebook. https://pair.withgoogle.com/guidebook-v2/
 
--
+- Columbia University School of Professional Studies. (2023). The Eisenhower Matrix. https://sps.columbia.edu/sites/default/files/2023-08/Eisenhower%20Matrix.pdf
+
+- OpenStax. Managing Time and Priorities. https://assets.openstax.org/oscms-prodcms/media/documents/OpenStax.Managing.Time.and.Priorities.Guide.pdf
