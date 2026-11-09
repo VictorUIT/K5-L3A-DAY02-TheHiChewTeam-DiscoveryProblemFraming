@@ -271,16 +271,17 @@ Vì sao:
 
 **Vì sao không chọn mức đơn giản hơn:**
 
-### 6.3. AI Canvas rút gọn
+## 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | |
-| **Judgment** — con người cân nhắc, quyết định gì? | |
-| **Action** — hành động cuối cùng là gì, ai làm? | |
-| **Outcome** — đo kết quả bằng gì? | |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | |
+| **Prediction** — AI dự đoán / tạo ra gì? | Thứ tự task đề xuất, lý do ưu tiên, các ràng buộc hoặc dữ liệu cần xác nhận; không tạo thêm task. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Kiểm tra độ quan trọng, deadline, phụ thuộc, điều kiện cá nhân và ngoại lệ; chấp nhận, sửa hoặc bỏ đề xuất. |
+| **Action** — hành động cuối cùng là gì, ai làm? | Người dùng xác nhận thứ tự tại bước 5; Rule lưu phương án tại bước 6. Người dùng tự thực hiện task và cập nhật tiến độ. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian chọn ưu tiên, tổng thời gian lập kế hoạch, tỷ lệ bỏ sót/đúng hạn và tỷ lệ lượt phải sửa đề xuất do sai. Cách đo và target thử nghiệm ở mục 7. |
+| **Input** — cần gì, có sẵn không? | ID, tên/yêu cầu, deadline hoặc xác nhận không có hạn, độ quan trọng, trạng thái, thời lượng dự kiến, phụ thuộc và ngoại lệ do người dùng cung cấp. Khi đánh giá xung đột thời gian cần thêm khoảng thời gian người dùng có thể làm việc. CSV CP4 chưa cung cấp bộ thuộc tính đầy đủ cho từng task hiện tại. |
+| **Feedback** — lấy phản hồi ở đâu? | Lượt dùng/bỏ đề xuất, nội dung và lý do sửa, task bỏ sót, kết quả đúng hạn, công nhập liệu và mức hữu ích của lời giải thích. Chỉ ghi dữ liệu trong phạm vi người dùng đồng ý. |
+
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
@@ -289,33 +290,53 @@ Vì sao:
 
 ---
 
-## 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
+# 7. Problem Statement v1 + tiêu chí đánh giá (CP6)
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** | |
-| **AI intervention point** | |
-| **Mức chọn** | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra** | |
+| **Actor** | Người phải quản lý và thực hiện nhiều công việc hoặc nhiệm vụ cùng lúc, thường xuyên tiếp nhận yêu cầu và deadline từ nhiều nguồn; tập trung kiểm chứng ở người gặp khó khăn lặp lại khi chọn việc tiếp theo. |
+| **Quy trình** | Giữ As-Is của CP5: tiếp nhận → ghi nhớ/theo dõi riêng lẻ → kiểm tra task → xem deadline/yêu cầu → tự chọn ưu tiên → thực hiện. To-Be gồm đúng sáu bước ở đầu mục 6. |
+| **Bottleneck** | Khó xác định thứ tự ưu tiên khi thông tin phân tán và phải cân nhắc nhiều yếu tố. CP4 có phản hồi tự thuật về thời gian cân nhắc, nhưng chưa có số bấm giờ của bước 5 As-Is hoặc toàn quy trình. |
+| **Impact** | Có thể bỏ sót task, tìm lại yêu cầu, thay đổi kế hoạch hoặc làm gấp. CP4 ghi nhận 13/27 phản hồi chọn hậu quả ở câu 7 và 14/27 kể tình huống ở câu 8; chưa quy tất cả hậu quả cho riêng bước chọn ưu tiên. |
+| **Success Metric** | Giữ các chỉ số của v0 và bổ sung phép đo tổng công lập kế hoạch, chất lượng đề xuất. Baseline trực tiếp chưa đo; target là mục tiêu thử nghiệm trong bảng dưới, không phải kết quả đã đạt. |
+| **Boundary** | Kế thừa CP5: AI không tự chốt, không tự sửa deadline/độ quan trọng/trạng thái, không tạo task hoặc tự xác nhận thông tin thiếu, không truy cập nguồn ngoài quyền cấp. Người dùng duyệt ở bước 5; lưu ở bước 6 chỉ theo xác nhận. Có fallback thủ công. |
+| **AI intervention point** | **Bước 4 To-Be**, sau Rule kiểm tra/tổng hợp ở bước 2–3 và trước người dùng duyệt ở bước 5. |
+| **Mức chọn** | **Workflow** để kiểm chứng; chưa triển khai AI khi chưa qua các điều kiện ở mục 8. |
+| **Rủi ro & người kiểm tra** | AI bỏ sót, sai dữ liệu/ràng buộc hoặc giải thích thiếu căn cứ. Rule đối chiếu cấu trúc, ID và dữ liệu gốc; người dùng kiểm tra thứ tự, lý do và ngoại lệ trước khi chốt. |
 
 **Thay đổi so với v0 và lý do:**
 
-| Trường | v0 | v1 | Vì sao đổi |
+| Trường | v0 (CP5) | v1 (CP6) | Vì sao đổi |
 |---|---|---|---|
-| | | | |
+| Actor, As-Is và bottleneck | Người quản lý nhiều task; khó lựa chọn ưu tiên | Giữ phạm vi; chỉ rõ nhóm cần kiểm chứng là người gặp khó khăn lặp lại | Đồng bộ CP5 và tránh suy rộng từ mọi phản hồi khảo sát. |
+| Success Metric | Chỉ số và cách đo; baseline/target định lượng chưa chốt | Bổ sung target thử nghiệm, công thức và đối chứng Rule | Tách mục tiêu thiết kế khỏi số đo; không bỏ công nhập và sửa dữ liệu. |
+| Boundary | AI đề xuất; người dùng duyệt/sửa; có fallback | Giữ giới hạn, cụ thể hóa kiểm tra trước bước lưu | Không mở rộng quyền của AI so với CP5. |
+| AI intervention point / mức chọn | To-Be đã đặt AI ở bước 4; v0 chưa có trường mức can thiệp | Ghi chính thức bước 4 và mức Workflow | Làm rõ thiết kế CP5 thuộc mức nào, không nhận đây là một bước mới. |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+**Success Metric: baseline → target thử nghiệm → cách đo**
+
+Các target dưới đây là ngưỡng thiết kế để kiểm chứng. Baseline chưa có số bấm giờ; phải ghi nhận trước khi thử và không lấy khoảng trả lời khảo sát làm thời gian trung bình.
+
+| Chỉ số | Baseline | Target thử nghiệm | Cách đo |
+|---|---|---|---|
+| Thời gian chọn ưu tiên | Chưa đo trực tiếp; ký hiệu B là trung vị các lượt As-Is | Trung vị khi dùng Workflow ≤80% B, nếu B >0 | Đo từ lúc bắt đầu xem danh sách đến khi xác nhận thứ tự; dùng cùng ranh giới đo ở hai phương án. |
+| Thời gian tìm lại thông tin task | Chưa đo trực tiếp | Không cao hơn baseline As-Is | Đo từ lúc tìm đến khi thấy đúng yêu cầu/deadline; ghi cả lượt không tìm được. |
+| **Tổng thời gian lập kế hoạch** | Đo riêng As-Is và Rule; ký hiệu R là trung vị tổng thời gian Rule | Trung vị Workflow ≤80% R và không cao hơn As-Is, nếu R >0 | Tính cả nhập/cập nhật, bổ sung dữ liệu, xử lý Rule/AI, đọc giải thích, sửa và xác nhận. Đây là chỉ số chính để xét giá trị tăng thêm của AI. |
+| Tỷ lệ task bỏ sót | Chưa đo; đối chiếu số task thực được giao với danh sách được xem xét | Không tăng so với As-Is; 0 task khẩn cấp đã có ở đầu vào bị AI bỏ sót | Số task bỏ sót / số task được giao trong cùng kỳ. Ghi riêng thiếu từ đầu vào và bị AI bỏ sót sau bước 3. |
+| Tỷ lệ hoàn thành đúng hạn | Chưa đo | Không thấp hơn As-Is trong kỳ thử | Task hoàn thành đúng hạn / task đến hạn trong kỳ. Tách nguyên nhân trễ; chưa kết luận nhân quả từ mẫu nhỏ. |
+| Mức phù hợp đề xuất | Chưa thử AI | Ít nhất 70% lượt hợp lệ không cần sửa vì AI hiểu sai dữ liệu/ngữ cảnh | Ghi số lượt có sửa do sai / tổng lượt hợp lệ. Sửa vì thay đổi sở thích hoặc có yêu cầu mới được ghi riêng. |
+
+**Tiêu chí đánh giá đầu ra AI — 5 tiêu chí:**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
+| 1 | Đủ task, không thêm hoặc lặp | Mỗi ID task cần xem xét xuất hiện đúng một lần; task chưa đủ điều kiện được liệt kê riêng kèm lý do | Thiếu, thêm hoặc lặp task; tự ẩn task chưa thể xếp hạng |
+| 2 | Giữ đúng dữ liệu gốc | Deadline, độ quan trọng, trạng thái và phụ thuộc khớp đầu vào | Tự sửa hoặc bịa thông tin |
+| 3 | Thứ tự tôn trọng ràng buộc cứng | Không đề xuất thực hiện task bị khóa trước điều kiện tiên quyết; cảnh báo khi không có thứ tự đáp ứng được các ràng buộc | Ví dụ B bắt buộc sau A nhưng lại đề xuất làm B trước A mà không báo xung đột |
+| 4 | Giải thích có căn cứ | Lý do ưu tiên đối chiếu được với dữ liệu task, ngoại lệ và điều kiện do người dùng cung cấp; nêu trường hợp nhiều thứ tự đều hợp lý | Lý do chung chung hoặc dùng thông tin không có trong đầu vào |
+| 5 | Xử lý dữ liệu thiếu và xung đột | Báo trường thiếu/xung đột, yêu cầu xác nhận; chỉ đánh giá xung đột thời gian khi có thời lượng và thời gian khả dụng | Tự điền dữ liệu trọng yếu, khẳng định lịch khả thi khi thiếu căn cứ hoặc che giấu xung đột |
+
+Quyền xem, sửa và duyệt của người dùng được kiểm tra ở bước 5–6 của hệ thống, ngoài việc chấm năm tiêu chí đầu ra. Một thứ tự có vẻ hợp lý không được áp dụng trước khi người dùng xác nhận.
 
 ---
 
