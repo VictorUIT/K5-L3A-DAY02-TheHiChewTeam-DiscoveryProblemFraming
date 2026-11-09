@@ -156,17 +156,31 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Tôi học được rằng cùng một chủ đề có thể có nhiều bottleneck khác nhau. Có bạn gặp khó khăn ở việc tìm lại thông tin, có bạn khó chọn thứ tự công việc, còn tôi chú ý đến việc tổng hợp feedback và quản lý chi tiêu. Vì vậy, không nên chỉ nhìn tên vấn đề mà phải xem actor, quy trình và hậu quả cụ thể.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có. Một số problem card của tôi đã đặt chữ “AI” ngay trong tên, như ý tưởng AI phân tích feedback hoặc AI quản lý chi tiêu. Khi phản biện, tôi nhận ra cách đặt tên đó đã giả định sẵn giải pháp và chưa chứng minh người dùng cần AI. Tôi sửa lại theo Job Story, mô tả quy trình hiện tại trước, sau đó mới xem xét Rule, Workflow hay Agent.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có. Ban đầu tôi cho rằng việc phân loại giao dịch thủ công là lý do đủ mạnh để dùng AI. Sau phản biện, tôi nhận ra các con số 20–40 phút mỗi ngày và độ chính xác 90% chỉ là ước lượng. Tôi đổi cách trình bày: giữ đây là giả thuyết cần kiểm chứng bằng giao dịch thật, bấm giờ từng bước và so sánh với bảng tính hoặc quy tắc phân loại trước khi đề xuất AI.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Điều làm tôi chú ý là dữ liệu khảo sát của nhóm có tín hiệu về khó khăn khi chọn task, nhưng chưa đủ để kết luận AI tạo thêm giá trị. Một bộ phận người trả lời vẫn cho rằng cách hiện tại đáp ứng phần lớn hoặc hoàn toàn nhu cầu. Điều đó nhắc tôi rằng có pain không đồng nghĩa với việc giải pháp AI là cần thiết; nhóm vẫn phải có baseline và đối chứng Rule.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là giữ câu phát biểu tập trung vào người dùng và bottleneck, không đưa tên công cụ hoặc tính năng vào quá sớm. Ngoài ra, cần phân biệt số liệu đã đo với mục tiêu thử nghiệm. Nếu actor quá rộng hoặc metric chỉ nói “tiết kiệm thời gian”, Problem Statement sẽ khó kiểm chứng và dễ dẫn nhóm đi sai hướng.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại, tôi sẽ ghi nhận dữ liệu và thời gian ngay từ đầu thay vì dùng khoảng ước lượng. Tôi cũng sẽ hỏi sớm hơn nhóm người dùng cụ thể là ai, dữ liệu đầu vào có đủ trường cần thiết không và Rule có thể giải quyết bao nhiêu phần. Tôi sẽ phản biện mạnh hơn việc suy ra nhu cầu dùng AI từ số người trả lời khảo sát, đồng thời yêu cầu đo cả công nhập dữ liệu, thời gian sửa và tỷ lệ bỏ qua đề xuất.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Problem của nhóm là người quản lý nhiều task song song khó chọn việc tiếp theo khi thông tin và tiêu chí ưu tiên chưa đầy đủ. Quy trình gồm nhập hoặc cập nhật task, kiểm tra dữ liệu, tổng hợp, để hệ thống đề xuất thứ tự, người dùng duyệt rồi lưu kết quả. Metric cần đo tổng thời gian, gồm cả nhập dữ liệu, chờ xử lý và sửa đề xuất, cùng chất lượng như task bị bỏ sót hoặc hoàn thành đúng hạn. Boundary là chỉ dùng task do người dùng chủ động cung cấp, chưa tự kết nối chat hoặc email. Nếu thử, AI chỉ hoạt động ở bước đề xuất trong Workflow và người dùng giữ quyền duyệt cuối cùng. Rule/checklist vẫn là đối chứng và fallback. Vì còn thiếu baseline, dữ liệu đủ trường và bằng chứng AI tốt hơn Rule, quyết định hiện tại của nhóm là Not Yet.
 
 ---
 
