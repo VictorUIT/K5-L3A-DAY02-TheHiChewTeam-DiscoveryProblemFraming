@@ -20,11 +20,11 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 |Khi tôi tiếp nhận feedback từ nhiều người, nhiều kênh nhưng không biết feedback nào cần ưu tiên để tránh trễ deadline.|Trưởng nhóm , thành viên | Feedback xuất hiện từ nhiều kênh: Email, Zalo, Messenger, Jira, Google Forms, mất nhiều thời gian tổng hợp  | |
-| 2 |Khi tra cứu thông tin, tài liệu học tập , tôi muốn biết thông tin vào đáng tin, và được phép trích dẫn , để trách dùng nguồn có thông tin sai lệch |Sinh viên,học sinh, người cần tìm tài liệu| Thông tin không thống nhất giữa các nguồn| |
-| 3 |Khi cuối tháng, tôi muốn biết tiền đã tiêu vào những nhóm nào, để hiểu vì sao ngân sách bị vượt |Cá nhân, sinh viên,người đi làm,gia đình. |Phát sinh giao dịch mỗi ngày từ tiền mặt, chuyển khoản, ví. Có thể phát sinh với tần suất từ 5-20 |  |
-| 4 |Khi có nhiều cuộc hẹn và việc cá nhân, tôi muốn biết việc nào có thể bị trễ hoặc xung đột, để chủ động sắp xếp lại | Cá nhân, sinh viên , người đi làm | Có nhiều cuộc hẹn trong 1 ngày, Các cuộc hẹn quá sát giờ nhau thời gian di chuyển không đủ  | |
-| 5 |Khi nhận thấy mình ngủ hoặc vận động kém trong nhiều ngày, tôi muốn biết nguyên nhân liên quan đến thói quen nào, để điều chỉnh sớm |Người đi làm , sinh viên |Thời gian ngủ thấp hơn nhu cầu cá nhân trong nhiều ngày liên tiếp, thời gian vận động dưới mục tiêu đặt ra, số bước chân giảm so với mức trung bình 7 ngày trước, Thời gian sử dụng điện thoại vào ban đêm| |
+| 1 | Pain từ người khác | Khi tiếp nhận feedback từ nhiều người ở nhiều kênh, tôi muốn biết feedback nào cần ưu tiên, để tránh sửa lan man và trễ deadline. | Trưởng nhóm, thành viên | Feedback có thể đến từ email, Zalo, Messenger, Jira và Google Forms; cần ghi thời gian tổng hợp và số feedback trong một chu kỳ thực tế. |
+| 2 | Cần đọc, tổng hợp nhiều thông tin | Khi tra cứu tài liệu học tập, tôi muốn biết nguồn nào đáng tin và được phép trích dẫn, để tránh dùng thông tin sai lệch. | Sinh viên, người cần tìm tài liệu | Thông tin không thống nhất giữa các nguồn; cần ghi thời gian kiểm chứng cho một chủ đề thực tế. |
+| 3 | Tốn thời gian | Khi cuối tháng, tôi muốn biết tiền đã tiêu vào những nhóm nào, để hiểu vì sao ngân sách bị vượt. | Cá nhân tự theo dõi chi tiêu | Phát sinh giao dịch hằng ngày bằng tiền mặt, chuyển khoản hoặc ví điện tử; cần đếm số giao dịch và thời gian phân loại thực tế. |
+| 4 | Lặp lại | Khi có nhiều cuộc hẹn và việc cá nhân, tôi muốn biết việc nào có thể bị trễ hoặc xung đột, để chủ động sắp xếp lại. | Cá nhân, sinh viên, người đi làm | Có ngày nhiều cuộc hẹn sát nhau; cần ghi số lần xung đột hoặc trễ hẹn trong một khoảng thời gian cụ thể. |
+| 5 | Cần đọc, tổng hợp nhiều thông tin | Khi nhận thấy mình ngủ hoặc vận động kém trong nhiều ngày, tôi muốn biết thói quen nào có liên quan, để điều chỉnh sớm. | Người đi làm, sinh viên | Có thể theo dõi số giờ ngủ, số bước, thời gian dùng điện thoại ban đêm và mức vận động trong ít nhất 7 ngày. |
 | 6 | | | | |
 | 7 | | | | |
 | 8 | | | | |
