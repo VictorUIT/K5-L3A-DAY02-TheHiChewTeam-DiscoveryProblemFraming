@@ -199,20 +199,35 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Tôi học được cách xem xét khó khăn thực tế và chi phí trước khi chọn AI. Khi góp ý về chi phí token cho việc làm video hàng loạt, tôi hiểu rằng cần xác định bước nào thực sự cần AI và cách đánh giá hiệu quả.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Có, nhóm nghĩ đến ứng dụng nhiều chức năng trước khi làm rõ vấn đề. Tôi quay lại xem quy trình của người học và tập trung vào khó khăn chọn việc tiếp theo, thay vì mở rộng ngay sang hỗ trợ làm bài hay tạo động lực.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Có, tôi chuyển từ ý tưởng Agent sang đề xuất Workflow. Phản biện rằng “tổng hợp nhiều yếu tố chưa đủ chứng minh cần Agent” giúp tôi nhận ra các bước có thể định sẵn; AI chỉ đề xuất thứ tự, người dùng quyết định cuối cùng.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Tôi bất ngờ khi báo cáo khảo sát ghi nhận 16/27 phản hồi thấy cách hiện tại đáp ứng phần lớn hoặc hoàn toàn nhu cầu. Điều này khiến tôi cân nhắc Rule trước, nhưng chưa có thử nghiệm đối chứng để kết luận Rule hay AI hiệu quả hơn.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là tách vấn đề khỏi giải pháp và chọn chỉ số đo phù hợp. Tôi cần mô tả rõ ai gặp khó khăn, ở bước nào và hậu quả gì; đồng thời phân biệt số liệu đã đo với mục tiêu thử nghiệm, tránh khẳng định hiệu quả khi chưa kiểm chứng.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Tôi sẽ đo thời gian từng bước, lưu bằng chứng và so sánh Rule với Workflow trên cùng dữ liệu. Tôi sẽ phản biện rõ hơn về sự cần thiết của AI, công nhập và sửa dữ liệu, chi phí vận hành và quyền quyết định của người dùng.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Người học và người quản lý nhiều nhiệm vụ khó chọn việc tiếp theo khi thông tin phân tán. Quy trình đề xuất gồm nhập task → Rule kiểm tra → Rule tổng hợp → AI đề xuất ưu tiên → người dùng duyệt → lưu theo xác nhận. Target thử nghiệm là giảm ít nhất 20% trung vị tổng thời gian lập kế hoạch so với Rule, không làm tăng tỷ lệ bỏ sót hoặc giảm tỷ lệ đúng hạn; baseline chưa đo. AI không tự sửa deadline, thêm task hay chốt phương án, và chỉ dùng dữ liệu được cho phép. Nhóm đề xuất Workflow vì các bước định sẵn, AI hỗ trợ đề xuất còn người dùng quyết định. Quyết định là Not Yet để kiểm chứng dữ liệu, giá trị tăng thêm so với Rule, khả năng sử dụng và chi phí.
 
 ---
 
 ## 7. Tài liệu tham khảo
+-chat gpt
 
 -
