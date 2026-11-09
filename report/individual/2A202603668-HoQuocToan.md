@@ -32,9 +32,6 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 - Không bổ sung vấn đề mới từ gợi ý của AI. Những nhận định chưa được kiểm chứng, như mức độ nhớ lại kiến thức, được giữ ở trạng thái chưa đo.
 
 ---
-Bấm **Copy** ở góc khối dưới. Dán thay toàn bộ mục `## 3.` và giữ nguyên từ `## 4.` trở đi. Những chỗ **chưa đo** và **mục tiêu đề xuất** cần được giữ rõ.
-
-````markdown
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
 ### Bảng chọn top 3
@@ -69,7 +66,7 @@ Bấm **Copy** ở góc khối dưới. Dán thay toàn bộ mục `## 3.` và g
 
 Quy trình nháp hiện tại:
 
-```text
+
 [1. Tạo nhân vật: chưa đo]
 → [2. Tạo, xem, chọn hoặc tạo lại animation: khoảng 360 phút]
   ← BOTTLENECK: chủ yếu chờ tạo, khoảng 4 phút/lượt
@@ -82,7 +79,7 @@ Quy trình nháp hiện tại:
 Tổng: khoảng 600 phút/video.
 Tổng các bước ngoài animation: khoảng 240 phút.
 Chưa phân bổ thời gian cho từng bước còn lại.
-```
+
 
 ### Problem Card #2 — Tra thuật ngữ làm gián đoạn việc tiếp nhận nội dung
 
@@ -101,7 +98,7 @@ Chưa phân bổ thời gian cho từng bước còn lại.
 
 Quy trình nháp hiện tại:
 
-```text
+
 [1. Nghe hoặc đọc nội dung: chưa đo]
 → [2. Gặp thuật ngữ chưa hiểu: chưa đo]
 → [3. Dừng để tìm hiểu nghĩa: khoảng 2 phút/từ]
@@ -109,7 +106,7 @@ Quy trình nháp hiện tại:
 → [4. Tiếp tục nghe hoặc đọc: chưa đo]
 
 Chưa đo tổng thời gian gián đoạn trong một buổi.
-```
+
 
 ### Problem Card #3 — Khó ưu tiên bài tập, thỉnh thoảng bỏ sót hoặc trễ hạn
 
@@ -128,7 +125,7 @@ Chưa đo tổng thời gian gián đoạn trong một buổi.
 
 Quy trình nháp hiện tại:
 
-```text
+
 [1. Tiếp nhận bài tập: chưa đo]
 → [2. Suy nghĩ và chọn bài ngẫu nhiên: khoảng 2 phút]
   ← ĐIỂM CẦN ĐIỀU TRA: tính đầy đủ và thứ tự ưu tiên
@@ -137,7 +134,7 @@ Quy trình nháp hiện tại:
 
 Đã có tình trạng thỉnh thoảng bỏ sót hoặc trễ hạn.
 Chưa xác định nguyên nhân và số lần cụ thể.
-```
+
 
 ### Card muốn pitch nhất
 
@@ -162,7 +159,7 @@ Chưa xác định nguyên nhân và số lần cụ thể.
 - Xác nhận hoặc điều chỉnh các target đề xuất và card muốn pitch.
 
 ---
-````
+
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
