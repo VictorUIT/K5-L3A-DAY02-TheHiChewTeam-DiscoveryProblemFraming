@@ -319,30 +319,54 @@ Vì sao:
 
 ---
 
-## 8. Quyết định (CP6)
+# 8. Quyết định (CP6)
 
-### 8.1. Bốn rủi ro
+## 8.1. Bốn rủi ro
 
-| Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
+| Rủi ro | Câu hỏi | Mức độ rủi ro | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | | |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | | |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | | |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | | |
+| **Value** | AI có tạo thêm giá trị và được dùng không? | **Cao** | CP4 hỗ trợ ban đầu cho nhu cầu ưu tiên task, nhưng 16/27 phản hồi thấy cách hiện tại đáp ứng phần lớn hoặc hoàn toàn. Chưa có đối chứng AI–Rule hoặc hành vi chấp nhận đề xuất; giả định 5 chưa được kiểm chứng trực tiếp. |
+| **Usability** | Người dùng có hiểu và sửa được kết quả không? | **Trung bình** | CP5 có cơ chế xem lý do, sửa và duyệt, nhưng chưa thử thao tác với người dùng; công nhập liệu có thể làm tăng tổng thời gian. |
+| **Feasibility** | Dữ liệu có đủ để xếp ưu tiên không? | **Cao** | Giả định 4 của CP4 chưa xác nhận. Câu 11 phản ánh thông tin mong muốn, không chứng minh task hiện tại có đủ giá trị deadline, độ quan trọng, thời lượng và phụ thuộc. |
+| **Viability** | Có phù hợp quyền truy cập, chi phí và vận hành không? | **Trung bình** | Giả định 6 chưa được kiểm chứng; task có thể chứa nội dung cá nhân/nội bộ. Phạm vi thử giới hạn ở task người dùng chủ động cung cấp, chưa kết nối tự động chat/email; cần đo chi phí và thống nhất phạm vi sử dụng dữ liệu. |
 
-### 8.2. Kết luận
+## 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định: Not Yet.** Chưa triển khai Workflow AI hoặc mở rộng sản phẩm trước khi xử lý hai rủi ro Cao: giá trị tăng thêm so với Rule và mức đầy đủ dữ liệu đầu vào.
 
-**Lý do:**
+**Lý do:** Giữ thiết kế To-Be của CP5 và lựa chọn Workflow để kiểm chứng, nhưng chưa có baseline bấm giờ, danh sách task đủ thuộc tính và thử nghiệm người dùng chấp nhận đề xuất. Có quy trình và sơ đồ chưa chứng minh cần AI hoặc đã đủ điều kiện bắt đầu pilot AI.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Việc thực hiện trước khi xem xét Go:**
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+1. Tuyển 3–5 người thuộc Actor mục tiêu, có khó khăn lặp lại khi chọn việc tiếp theo; thống nhất task và trường dữ liệu được phép sử dụng. Trả lời khảo sát không đồng nghĩa chấp nhận chia sẻ lịch hoặc tin nhắn.
+2. Ghi task trong 1 tuần. Trường tối thiểu: ID/tên, deadline hoặc xác nhận không có hạn, độ quan trọng và trạng thái; phụ thuộc cần được xác nhận. Bổ sung thời lượng và thời gian khả dụng khi kiểm tra xung đột thời gian. Ghi công bổ sung dữ liệu, không âm thầm loại task thiếu.
+3. Đo ít nhất 10 lượt chọn ưu tiên As-Is trên nhóm thử và xây dựng đối chứng Rule. Tính công tìm lại thông tin, nhập/cập nhật, kiểm tra và xác nhận theo các ranh giới ở mục 7.
+4. Thử prototype hiển thị lý do, sửa và xác nhận. Sau khi dữ liệu, phạm vi sử dụng và baseline sẵn sàng, mới xem xét bắt đầu pilot AI; quyết định hiện tại vẫn là Not Yet.
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Pilot nhỏ nhất sau khi đủ điều kiện:** 3–5 người trong 2 tuần, có ít nhất 10 cặp lượt lập kế hoạch so sánh được giữa Rule và Workflow AI. Dùng cùng bản sao dữ liệu task và bộ ràng buộc; thay đổi thứ tự thử hai phương án giữa các lượt/người để giảm ảnh hưởng ghi nhớ. Ghi kết quả từng người, không coi số lượt là số người độc lập.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+- **Rule:** Người dùng áp dụng checklist/quy tắc ưu tiên minh bạch và chốt kết quả.
+- **Workflow:** Giữ nguyên sáu bước CP5; AI chỉ đề xuất ở bước 4, người dùng duyệt ở bước 5.
+- **Đo:** Tổng thời gian kể cả công nhập, chờ xử lý và sửa; chất lượng đầu ra theo năm tiêu chí; lý do bỏ hoặc chỉnh đề xuất; task bỏ sót và đúng hạn.
+- **Xét tiếp tục:** Chỉ xem xét Go cho bước thử tiếp theo nếu đạt target tổng thời gian, mức phù hợp, tiêu chí an toàn và không làm xấu các chỉ số bỏ sót/đúng hạn. Không suy rộng thành hiệu quả đã chứng minh cho mọi người dùng.
+
+**Ngưỡng dừng:**
+
+| Điều kiện | Ngưỡng / thời điểm đánh giá | Hành động |
+|---|---|---|
+| Dữ liệu đầu vào | Sau 1 tuần, dưới 60% task có đủ trường tối thiểu đã thống nhất | Chưa bắt đầu pilot AI; sửa cách nhập/cập nhật và kiểm chứng lại giả định 4. |
+| Tính đúng đắn và quyền kiểm soát | Bất kỳ lượt nào AI tự sửa dữ liệu gốc, bỏ sót task khẩn cấp, vi phạm phụ thuộc cứng hoặc hệ thống áp dụng khi chưa được duyệt | Dừng ngay phần AI, quay về Rule/thủ công và kiểm tra nguyên nhân. |
+| Mức phù hợp | Sau ít nhất 10 lượt hợp lệ, trên 30% lượt phải sửa vì AI hiểu sai dữ liệu/ngữ cảnh | Không mở rộng; xem lại dữ liệu và cách đề xuất. |
+| Mức sử dụng | Trong 2 tuần thử, gợi ý bị bỏ qua vì không hữu ích ở trên 50% số ngày có dùng hệ thống và có phát sinh nhu cầu chọn task | Xem lại Value/Usability; không mở rộng thành phần AI. |
+| Giá trị tăng thêm | Kết thúc 2 tuần và có ít nhất 10 cặp lượt hợp lệ, trung vị tổng thời gian Workflow không giảm ít nhất 20% so với Rule, hoặc làm xấu tỷ lệ bỏ sót/đúng hạn | Giữ Rule/checklist; chưa tiếp tục đầu tư AI theo giả thuyết hiện tại. |
+| Chi phí và phạm vi dữ liệu | Vượt mức chi phí đã thống nhất trước thử hoặc xử lý ngoài dữ liệu người dùng cho phép | Dừng phần AI, kiểm tra cấu hình/phạm vi sử dụng trước khi thử lại. |
+
+Các phần trăm, thời lượng và quy mô thử ở mục 7–8 là **mục tiêu thiết kế thử nghiệm**, không phải kết quả thu thập và không phải tiêu chuẩn chung cho mọi sản phẩm.
+
+**Phương án thay thế:** Tiếp tục danh sách task tập trung, kiểm tra dữ liệu, lọc theo Rule và sắp xếp thủ công như fallback của CP5. Nếu cách này đủ đáp ứng, không cần nâng lên AI hoặc Agent.
+
+---
+## 9. Hạn chế và hướng tiếp theo
 
 ---
 
@@ -374,8 +398,11 @@ Hướng tiếp theo:
 
 ## 10. Tài liệu tham khảo
 
-- [CSV khảo sát do nhóm cung cấp — 27 phản hồi](../assets/cp4-khao-sat.csv).
-- [Danh sách 27 snapshot khảo sát](../assets/cp4-interview-snapshot/README.md).
-- [Asana — The Eisenhower Matrix](https://asana.com/resources/eisenhower-matrix), truy cập 09/11/2026.
-- [Todoist — Introduction to filters](https://www.todoist.com/help/todoist/features/introduction-to-filters-V98wIH), truy cập 09/11/2026.
-- [Motion — Auto-scheduling](https://www.usemotion.com/help/time-management/auto-scheduling), truy cập 09/11/2026.
+1. [CP4 — Assumption Map, đối chiếu bằng chứng và research của nhóm](https://github.com/VictorUIT/K5-L3A-DAY02-TheHiChewTeam-DiscoveryProblemFraming/blob/main/report/team/group_report.md), mục 3.
+2. [CSV khảo sát do nhóm cung cấp — 27 phản hồi](../assets/cp4-khao-sat.csv).
+3. [Danh sách 27 snapshot khảo sát](../assets/cp4-interview-snapshot/README.md).
+4. **CP5_da_chen_Mermaid.md** — bản CP5 được dùng làm nguồn cho As-Is, To-Be, Problem Statement v0, Boundary và Fallback; giữ nguyên file CP5 khi chỉnh CP6.
+5. [Asana — The Eisenhower Matrix](https://asana.com/resources/eisenhower-matrix), truy cập 09/11/2026.
+6. [Todoist — Introduction to filters](https://www.todoist.com/help/todoist/features/introduction-to-filters-V98wIH), truy cập 09/11/2026.
+7. [Motion — Auto-scheduling](https://www.usemotion.com/help/time-management/auto-scheduling), truy cập 09/11/2026.
+8. [Worksheet của lab](https://github.com/VictorUIT/K5-L3A-DAY02-TheHiChewTeam-DiscoveryProblemFraming/blob/main/docs/01-worksheet.md) — ma trận, mức can thiệp, Problem Statement v1 và quyết định theo bốn rủi ro.
