@@ -228,6 +228,12 @@ Người học và người quản lý nhiều nhiệm vụ khó chọn việc t
 ---
 
 ## 7. Tài liệu tham khảo
--chat gpt
+1.VinUni AI20k — Worksheet Discovery & Problem Framing: hướng dẫn chính từ CP1 đến CP6.
+2.Teresa Torres — Sourcing Opportunities: xác định nhu cầu, gom vấn đề và cây OST — CP3–CP4.
+3.Jeff Gothelf — Lean UX Canvas: xác định vấn đề, giả thuyết và kiểm chứng — CP5.
+4.Google PAIR — User Needs + Defining Success: nhu cầu người dùng, mức hỗ trợ AI và tiêu chí thành công — CP4–CP6.
+5.Anthropic — Building Effective Agents: phân biệt Workflow và Agent — CP6.
+6.Agrawal, Gans và Goldfarb — Prediction Machines: AI Canvas — CP6.
+7.Marty Cagan — The Four Big Risks: Value, Usability, Feasibility và Viability — CP6.
 
--
+
