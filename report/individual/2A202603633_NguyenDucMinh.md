@@ -186,7 +186,7 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 Tôi nhận ra sinh viên có nhiều vấn đề khác nhau trong học tập. Một vấn đề có vẻ nhỏ nhưng nếu lặp lại thường xuyên có thể gây ảnh hưởng lớn. Tôi cũng học được cách đánh giá vấn đề dựa trên nhu cầu người dùng thay vì chỉ nhìn vào giải pháp.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
-Có thể xảy ra khi nhóm nghĩ ngay đến việc xây dựng ứng dụng tích hợp AI. Tuy nhiên, cần xác định vấn đề, đối tượng sử dụng và quy trình hiện tại trước khi lựa chọn giải pháp.
+Có. Ngay khi nhóm nghĩ ngay đến việc xây dựng ứng dụng tích hợp AI thì đã chuẩn bị tranh cãi về ứng dụng luôn. Tuy nhiên, trưởng nhóm đã thuyết phục cả nhóm xác định vấn đề, đối tượng sử dụng và quy trình hiện tại trước khi lựa chọn giải pháp.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 Có. Tôi nhận ra quản lý deadline không đơn thuần là vấn đề quên lịch. Nguyên nhân có thể đến từ việc thông tin phân tán trên nhiều nền tảng. Vì vậy, cần tìm hiểu nguyên nhân thực tế trước khi đề xuất giải pháp.
