@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: TheHiChewTeam
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Người phải quản lý nhiều nhiệm vụ song song khó xác định thứ tự ưu tiên để chọn công việc cần thực hiện tiếp theo.
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
