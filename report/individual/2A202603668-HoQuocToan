@@ -1,16 +1,12 @@
-# Báo cáo cá nhân — MSSV_HoTen
-
-> Đổi tên file theo quy tắc `MSSV_HoTen.md`, ví dụ `20241234_NguyenVanAn.md` (MSSV trước, dấu `_`, họ tên viết liền không dấu). Sửa cả dòng tiêu đề phía trên cho khớp.
-> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
-> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
+# Báo cáo cá nhân — 2A202603668_HoQuocToan
 
 ## 1. Thông tin học viên
 
-- Họ tên:
-- MSSV:
-- Email trường (không bắt buộc, repo có thể để public):
-- Tên nhóm:
-- Link repo nhóm:
+- Họ tên: Ho Quoc Toan
+- MSSV: 2A202603668
+- Email trường (không bắt buộc): Không cung cấp
+- Tên nhóm: TheHiChewTeam
+- Link repo nhóm: https://github.com/VictorUIT/K5-L3A-DAY02-TheHiChewTeam-DiscoveryProblemFraming
 
 ---
 
@@ -20,18 +16,20 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 | # | Lăng kính | Job Story: Khi… tôi muốn… để… | Ai chịu ảnh hưởng? | Dấu hiệu thật (thời gian, tần suất, số người, bằng chứng) |
 |---:|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| 1 | Lặp lại | Khi có nhiều bài tập từ các môn học, tôi muốn biết đầy đủ các bài cần làm và thứ tự ưu tiên, để tránh bỏ sót và hoàn thành đúng hạn. | Tôi — sinh viên | Tôi thường suy nghĩ khoảng 2 phút rồi chọn bài làm ngẫu nhiên. Tôi đã thỉnh thoảng bỏ sót bài và trễ hạn. Chưa thống kê số bài hoặc số lần trễ hạn. |
+| 2 | Cần đọc, tổng hợp nhiều thông tin | Khi gặp thuật ngữ và từ tiếng Anh chưa hiểu trong bài giảng, tài liệu hoặc trao đổi chuyên ngành, tôi muốn hiểu nghĩa của chúng trong ngữ cảnh, để theo kịp nội dung đang được truyền đạt. | Tôi — sinh viên chuyên ngành AI | Tôi thường xuyên gặp từ chưa hiểu, ví dụ workflow, flow và review. Mỗi từ mất khoảng 2 phút tìm hiểu. Việc tra cứu khiến tôi xao nhãng và khó tập trung theo dõi người đang truyền đạt. |
+| 3 | Cần đọc, tổng hợp nhiều thông tin | Khi có nhiều tài liệu phục vụ bài tập, tôi muốn xác định tài liệu liên quan và phần nên đọc trước, để tìm được thông tin cần thiết cho bài làm. | Tôi — sinh viên | Khi làm bài gần đây, tôi có khoảng 15 file tài liệu. Tôi ưu tiên nội dung gây ấn tượng rồi mở đọc nhiều file theo cảm tính. Chưa đo thời gian tìm và đọc tài liệu. |
+| 4 | Tốn thời gian | Khi sản xuất video lịch sử, tôi muốn giảm thời gian chờ và tạo lại animation đạt yêu cầu, để hoàn thành video nhanh hơn mà vẫn bảo đảm chất lượng. | Tôi — người tự sản xuất video lịch sử | Theo ước lượng cá nhân, mỗi video mất khoảng 10 giờ; công đoạn tạo và chọn animation chiếm khoảng 6 giờ, chủ yếu do chờ AI tạo video. Mỗi lượt tạo mất khoảng 4 phút và phải thử nhiều lượt để chọn kết quả tốt. Trong lúc chờ, tôi không làm việc khác trên máy vì máy đang xử lý nặng. Chưa thống kê số lượt tạo cho mỗi video. |
+| 5 | Lặp lại | Khi kết thúc một ngày học nhiều nội dung lý thuyết và thực hành, tôi muốn hệ thống lại kiến thức trọng tâm và xác định phần chưa hiểu, để ghi nhớ và biết cần ôn tập nội dung nào. | Tôi — sinh viên chuyên ngành AI | Tôi học nhiều nội dung nhưng cuối ngày không ghi chú hoặc tổng hợp lại. Tôi cảm thấy khó nhớ kiến thức vừa học. Chưa kiểm tra cụ thể mức độ nhớ lại và chưa thống kê tần suất xảy ra. |
 
-**Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
+**Ghi chú về bằng chứng:** Các thông tin trên là tự thuật từ trải nghiệm cá nhân. Các mốc thời gian là số ước lượng. Những thông tin chưa có số liệu được ghi rõ để tiếp tục kiểm chứng.
 
--
+**Nếu có dùng AI để gợi ý thêm:**
+
+- Năm vấn đề ban đầu do tôi tự nêu từ trải nghiệm học tập và sản xuất video.
+- AI hỗ trợ đặt câu hỏi làm rõ tình huống, cách xử lý hiện tại, thời gian và hậu quả; đồng thời hỗ trợ diễn đạt theo mẫu Job Story.
+- Tôi cung cấp thêm thông tin về thời gian làm video, thời gian chờ tạo animation, cách chọn bài tập, việc tra thuật ngữ và số lượng tài liệu.
+- Không bổ sung vấn đề mới từ gợi ý của AI. Những nhận định chưa được kiểm chứng, như mức độ nhớ lại kiến thức, được giữ ở trạng thái chưa đo.
 
 ---
 
