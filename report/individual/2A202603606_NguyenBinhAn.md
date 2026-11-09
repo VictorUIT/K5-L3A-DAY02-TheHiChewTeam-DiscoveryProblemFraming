@@ -143,16 +143,16 @@ Liệu khó khăn lớn nhất khi xếp thời khóa biểu nằm ở thuật t
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Chuẩn bị Card #2 về khó khăn khi xếp thời khóa biểu cho giáo viên và đưa vào bảng Pitch của nhóm. | Mô tả actor, xung đột lịch và bước rà soát/chỉnh sửa, mỗi bước ước lượng khoảng 30 phút; xem mục 2.1 của [báo cáo nhóm](../team/group_report.md). |
+| Phản biện bài của bạn khác | Chuẩn bị câu hỏi cho Khanh: “Nếu hai task cùng gấp, bạn chọn theo tiêu chí nào?” | Đưa câu hỏi vào bảng Pitch để làm rõ tiêu chí chọn thứ tự ưu tiên. |
+| Nhận phản biện | Bảng Pitch phân công Toan hỏi tôi: “Xung đột lịch do dữ liệu đầu vào hay quy tắc xếp lịch?” | Ghi câu hỏi trong bảng Pitch để phân biệt vấn đề dữ liệu đầu vào với quy tắc xếp lịch. |
+| Gom cluster / cây OST | Tổng hợp nội dung nhóm cung cấp thành 5 cluster A–E và cây cơ hội; tách các ý như dashboard, AI quyết định task và phần thưởng khỏi tầng opportunity. | Mục 2.2–2.3 thể hiện các pain về tổng quan công việc, chọn ưu tiên, thực thi, tập trung và đánh giá tiến độ; được lưu trong commit [CP3](https://github.com/VictorUIT/K5-L3A-DAY02-TheHiChewTeam-DiscoveryProblemFraming/commit/4ad0033). |
+| Chọn candidate problem | Tổng hợp bảng điểm, lý do chọn và loại các candidate theo nội dung nhóm cung cấp. | Candidate B — khó xác định thứ tự ưu tiên task — đạt 33/35 điểm, đồng hạng với E; lý do chọn B được ghi tại mục 2.4. |
+| Kiểm chứng / research | Đưa 27 phản hồi từ CSV vào mẫu snapshot, đối chiếu 6 giả định với câu hỏi khảo sát và tổng hợp research 3 công cụ/pattern. | Ghi cả tín hiệu xác nhận và phản bác: 22/27 phản hồi có khó khăn, 5/27 không gặp khó khăn; giả định 4–6 chưa được xác nhận trực tiếp. Bằng chứng ở [CSV](../assets/cp4-khao-sat.csv), [snapshot](../assets/cp4-interview-snapshot/README.md) và mục 3 của báo cáo nhóm. |
+| Quy trình nhóm | Nhờ AI rà soát hai file CP5–CP6, đối chiếu các bước, vai trò Rule/AI/con người, boundary và fallback. Tôi yêu cầu giữ nguyên CP5, chỉ chỉnh bản CP6 riêng. | Bản rà soát giữ luồng To-Be 6 bước: nhập → kiểm tra → tổng hợp → AI đề xuất → người dùng duyệt → lưu/cập nhật; luồng này hiện được thể hiện tại mục 4.2 của báo cáo nhóm. |
+| Problem Statement | Yêu cầu đối chiếu v0 của CP5 với v1 của CP6 về actor, bottleneck, metric và giới hạn quyền của AI. | Bản CP6 được rà soát để giữ cùng phạm vi với CP5, phân biệt baseline chưa đo với target thử nghiệm và ghi rõ điểm AI tham gia. |
+| Mức can thiệp AI | Nhờ AI đối chiếu No AI, Rule, Workflow và Agent với luồng đã mô tả trong CP5. | Bản CP6 riêng xác định Workflow: AI ở bước 4, người dùng chốt ở bước 5; Rule/checklist được giữ làm đối chứng và fallback. Lựa chọn này thống nhất với mục 6.2 của báo cáo nhóm hiện tại. |
+| Quyết định | Yêu cầu bản CP6 thống nhất một quyết định và gắn với rủi ro, điều kiện thử, metric và ngưỡng dừng. | Bản CP6 riêng kết luận Not Yet do chưa có baseline trực tiếp, dữ liệu task đầy đủ và bằng chứng giá trị tăng thêm của AI so với Rule; thống nhất với mục 8 của báo cáo nhóm hiện tại. |
 
 ---
 
@@ -160,12 +160,10 @@ Liệu khó khăn lớn nhất khi xếp thời khóa biểu nằm ở thuật t
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | Nhờ AI đưa nội dung P1–P5 tôi cung cấp vào mẫu báo cáo, chuẩn hóa tên lăng kính và cách viết Job Story. | Hỗ trợ định dạng bảng, điền thông tin học viên và link repo nhóm, trình bày rõ nguồn trải nghiệm và số liệu ước lượng chưa kiểm chứng. | | |
+| CP1 Scan | Nhờ AI đưa P1–P5 tôi cung cấp vào mẫu báo cáo, chuẩn hóa lăng kính và Job Story. | Giúp trình bày vấn đề, actor và số liệu từ trải nghiệm của tôi hoặc trao đổi với người thân. | Việc định dạng không xác minh được các số liệu tôi nhớ hoặc ước lượng. | Tôi cung cấp tình huống và con số; giữ rõ P2–P3 là thông tin gián tiếp, chưa có số đo thực tế. |
 | CP2 Problem Card | Nhờ AI đưa bản CP2 tôi cung cấp vào báo cáo, chuyển quy trình sang sơ đồ và phản biện các card. | Chỉ ra baseline P1 là lần tìm không thành công; giúp phân biệt thời gian từng bước, tổng thời gian và nguồn thông tin. | AI ban đầu hiểu chuỗi thời gian tôi ghi ở P3 là 1–6 giờ và hỏi lại; cách hiểu đó không đúng với ý tôi. | Tôi làm rõ P1 là vòng lặp, xác nhận ví dụ P2 do bố kể và sửa cách hiểu thời gian phát hiện ở P3 thành trên 6 giờ. Tôi đồng ý sửa P1 và P3; không đồng ý đổi P2 sang Chưa biết và giữ Rule với ràng buộc cụ thể. |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP4 Research | Nhờ AI chuyển CSV thành 27 snapshot, thống kê, khớp 6 giả định và tìm nguồn chính thức về giải pháp đã có. | Phân biệt bằng chứng hỗ trợ, phản bác và phần chưa thể kết luận; tìm được tài liệu Asana, Todoist, Motion. | Thống kê phản hồi chưa chứng minh dữ liệu task đã đầy đủ, người dùng chấp nhận đề xuất hoặc đồng ý chia sẻ dữ liệu. | Tôi yêu cầu khớp bằng chứng theo từng giả định; bản báo cáo giữ giả định 4–6 ở trạng thái chưa xác nhận và không coi mong muốn là hành vi sử dụng. |
+| CP7 Biên tập | Nhờ AI rút gọn bản Reflection tôi cung cấp xuống khoảng 220 từ cho mục 6.1–6.6. | Giữ 6 ý chính và kiểm tra số từ; phần 6.7 giữ nguyên bản tôi gửi. | Chỉ hỗ trợ biên tập câu chữ trên bản có sẵn, không bổ sung trải nghiệm. | Tôi cung cấp bản gốc và yêu cầu rút gọn; nội dung được giữ theo ý đã viết. |
 
 ---
 
@@ -175,20 +173,40 @@ Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ ch
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
+Tôi học được rằng một vấn đề cần được đánh giá qua đối tượng, tần suất, tác động và bằng chứng thực tế. Trải nghiệm của tôi không nhất thiết phản ánh nhu cầu của người khác.
+
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+
+Nhóm từng nghĩ đến ứng dụng quản lý công việc có AI trước khi hiểu rõ vấn đề. Sau phản biện, nhóm thu hẹp vào khó khăn xác định thứ tự ưu tiên giữa nhiều task.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
+Tôi đã bỏ các mốc 60 và 15 phút trong bản nháp vì chưa đo thực tế. Tôi giữ trạng thái chưa có baseline và bổ sung cách đo thay vì khẳng định hiệu quả.
+
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+
+Tôi nhận ra Todoist và Rule đã giải quyết được một phần nhu cầu. Mất thời gian tìm task chưa chứng minh cần AI xếp ưu tiên; phải kiểm chứng giá trị tăng thêm.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
+Khó nhất là tách biểu hiện như quên task, trễ hạn khỏi nguyên nhân. Tôi cần xác định đúng bottleneck, metric và phân biệt dữ liệu đã có với giả thuyết.
+
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
+Nếu làm lại, tôi sẽ quan sát người dùng, bấm giờ và so sánh thủ công, Rule, AI trên cùng dữ liệu. Tôi sẽ phản biện mạnh hơn về sự cần thiết của AI và sẵn sàng đổi hướng khi bằng chứng không ủng hộ ý tưởng.
+
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
+
+Vấn đề nhóm tôi lựa chọn là người phải quản lý nhiều công việc cùng lúc gặp khó khăn trong việc xác định task nào cần thực hiện trước. Trong quy trình hiện tại, người dùng tiếp nhận nhiệm vụ từ nhiều nguồn, tự tìm lại thông tin và cân nhắc thứ tự ưu tiên dựa trên kinh nghiệm cá nhân. Nhóm đề xuất quy trình tương lai gồm sáu bước, trong đó hệ thống kiểm tra và tổng hợp dữ liệu, AI phân tích để gợi ý thứ tự ưu tiên, còn người dùng quyết định cuối cùng. Để đánh giá hiệu quả, nhóm cần đo thời gian lựa chọn task, tổng thời gian lập kế hoạch, tỷ lệ bỏ sót nhiệm vụ và chất lượng đề xuất của AI. Boundary được đặt ra để AI không tự ý thay đổi deadline, trạng thái công việc hoặc đưa ra quyết định bắt buộc thay người dùng. Nhóm lựa chọn hướng Workflow có AI hỗ trợ thay vì Agent tự chủ, đồng thời sử dụng phương án Rule để đối chứng. Quyết định hiện tại là Not Yet, nghĩa là cần tiếp tục kiểm chứng dữ liệu đầu vào, nhu cầu và giá trị thực sự của AI trước khi triển khai thử nghiệm rộng hơn.
 
 ---
 
 ## 7. Tài liệu tham khảo
 
--
+- [Worksheet của lab](../../docs/01-worksheet.md) và [rubric chấm bài](../../RUBRIC.md).
+- [Báo cáo nhóm — CP3–CP6](../team/group_report.md).
+- [CSV khảo sát do nhóm cung cấp](../assets/cp4-khao-sat.csv) và [27 snapshot](../assets/cp4-interview-snapshot/README.md).
+- [Asana — The Eisenhower Matrix](https://asana.com/resources/eisenhower-matrix).
+- [Todoist — Introduction to filters](https://www.todoist.com/help/todoist/features/introduction-to-filters-V98wIH).
+- [Motion — Auto-scheduling](https://www.usemotion.com/help/time-management/auto-scheduling).
+- Bản rà soát riêng: `CP5_da_chen_Mermaid.md` và `CP6_hoan_chinh_dong_bo_CP5_muc9_bosung.md` trong Downloads; đối chiếu với mục 4–9 của báo cáo nhóm hiện tại.
