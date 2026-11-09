@@ -164,16 +164,16 @@ Chưa xác định nguyên nhân và số lần cụ thể.
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | | |
-| Phản biện bài của bạn khác | Câu hỏi tôi đã đặt: | |
-| Nhận phản biện | Câu hỏi tôi nhận được: | Tôi đã sửa gì: |
-| Gom cluster / cây OST | | |
-| Chọn candidate problem | | |
-| Kiểm chứng / research | | |
-| Quy trình nhóm | | |
-| Problem Statement | | |
-| Mức can thiệp AI | | |
-| Quyết định | | |
+| Pitch Problem Card | Tôi trình bày khó khăn khi gặp thuật ngữ chuyên ngành và từ tiếng Anh trong quá trình học. | Nhóm góp ý sử dụng hình ảnh làm đầu vào và LLM giải thích nghĩa của từ theo ngữ cảnh. |
+| Phản biện bài của bạn khác | Tôi hỏi về chi phí token đối với đề tài sản xuất hàng loạt video để xây kênh. | Góp phần điều chỉnh hướng giải quyết thành dùng AI hỗ trợ những phần phù hợp, thay vì giao toàn bộ việc sản xuất cho AI. |
+| Nhận phản biện | Góp ý tôi nhận được là bổ sung Computer Vision, sử dụng hình ảnh chứa thuật ngữ và nội dung xung quanh để LLM giải thích nghĩa theo ngữ cảnh. | Tôi bổ sung Computer Vision vào hướng giải pháp cho vấn đề thuật ngữ. Chưa có thông tin kiểm thử thực tế để đánh giá hiệu quả. |
+| Gom cluster / cây OST | Tôi góp ý về nhu cầu tăng hứng thú làm việc và duy trì sự tập trung của người học. Chưa ghi nhận đóng góp cụ thể về việc gom các candidate thành cluster. | Bổ sung góc nhìn về sự tập trung trong thảo luận. Nhóm chưa vẽ cây OST. |
+| Chọn candidate problem | Tôi đồng ý với hướng giải quyết tình trạng người học bị quá tải và không biết nên học hoặc làm bài nào trước. Tôi đề xuất bổ sung thuật toán phân loại mức độ cấp thiết của công việc. | Nhóm định hướng xây dựng ứng dụng quản lý công việc cho sinh viên và người học chương trình nâng cao, gồm: tổng hợp, ra quyết định, hỗ trợ làm bài, hỗ trợ tập trung và theo dõi tiến độ. |
+| Kiểm chứng / research | Tôi chưa trực tiếp tham gia phỏng vấn hoặc khảo sát. Tôi đã tìm hiểu một số ứng dụng sắp xếp thời gian nhưng hiện không nhớ tên. | Nhận biết được các giải pháp đã có chức năng lên lịch và tự sắp xếp công việc. Cần tìm lại tên và link để đối chiếu; hiện chưa đủ nguồn cho bảng research hoàn chỉnh. |
+| Quy trình nhóm | Tôi mô tả luồng: người dùng nhập công việc, bài tập hoặc nội dung chưa kịp học → ứng dụng tổng hợp → AI đưa ra ít nhất 3 phương án sắp xếp ưu tiên → người dùng chọn phương án cuối cùng. | Làm rõ đầu vào, đầu ra và vai trò quyết định của người dùng. Các yếu tố được xem xét gồm hạn nộp, độ phức tạp, thời gian dự kiến hoàn thành, mức độ quan trọng và trạng thái hoàn thành. |
+| Problem Statement | Nhóm đã viết Problem Statement. Trong quá trình trao đổi, tôi góp ý sửa phần xác định mức độ ưu tiên và bổ sung trạng thái hoàn thành của từng công việc. | Phần xác định ưu tiên có thêm thông tin về tiến độ thực hiện. Cần đối chiếu bản v0 và v1 để chỉ rõ đoạn thay đổi trong Problem Statement, phân biệt với nội dung mô tả tính năng. |
+| Mức can thiệp AI | Tôi làm rõ hướng sử dụng AI để tổng hợp nhiều yếu tố và đề xuất thứ tự làm việc. Người dùng là người lựa chọn cuối cùng giữa ít nhất 3 phương án. | Nhóm chọn Agent cho việc xác định ưu tiên. Cần làm rõ Agent tự chọn hành động hoặc công cụ nào, đồng thời so sánh với Workflow và thuật toán ưu tiên thông thường. |
+| Quyết định | Tôi ghi nhận hướng hiện tại của nhóm là cần kiểm chứng thêm trước khi triển khai. | Quyết định hiện tại: Not Yet. Cần bổ sung bằng chứng từ người dùng và đánh giá hiệu quả của việc đề xuất thứ tự ưu tiên trước khi chốt triển khai. |
 
 ---
 
@@ -181,15 +181,18 @@ Chưa xác định nguyên nhân và số lần cụ thể.
 
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
-| CP1 Scan | | | | |
-| CP2 Problem Card | | | | |
-| CP4 Research | | | | |
-| CP5 Quy trình | | | | |
-| CP5–6 Problem Statement | | | | |
-| CP6 Mức can thiệp / quyết định | | | | |
+| CP1 Scan | Tôi tự nêu 5 vấn đề từ trải nghiệm cá nhân, sau đó dùng cuộc trao đổi này để làm rõ thông tin và hỗ trợ diễn đạt thành Job Story. | AI đặt câu hỏi về tình huống, cách xử lý, thời gian và hậu quả; hỗ trợ trình bày bảng scan. | Ban đầu chưa phân biệt rõ thời gian xem, chọn animation với thời gian chờ công cụ tạo video. | Tôi làm rõ công đoạn animation khoảng 6 giờ, chủ yếu là chờ tạo; mỗi lượt khoảng 4 phút. Tôi cũng bổ sung rằng máy xử lý nặng khiến tôi không làm việc khác song song được. |
+| CP2 Problem Card | Tôi nhờ AI hỗ trợ soạn bản nháp 3 Problem Card, quy trình hiện tại và phản biện các điểm còn thiếu. | AI giúp phân biệt bước nghẽn, tác động và cách đo. Với bài tập, tác động quan trọng là bỏ sót và trễ hạn, không chỉ là khoảng 2 phút lựa chọn. | Các target do AI đề xuất chưa được kiểm chứng. Nhiều bước còn thiếu thời gian thực tế và các quy trình nháp cần được xác nhận. | Tôi bổ sung việc đã thỉnh thoảng bỏ sót bài, trễ hạn và làm rõ thời gian chờ tạo video. Những mục tiêu và thời gian chưa đo vẫn được đánh dấu để kiểm chứng. |
+| CP4 Research | Tôi dùng AI đặt câu hỏi để ghi nhận việc tìm hiểu ứng dụng mà tôi đã làm. Chưa dùng cuộc trao đổi này để tìm và xác minh nguồn về các ứng dụng quản lý công việc. | AI giúp chỉ ra cần có tên ứng dụng, link và mô tả chức năng cụ thể để đối chiếu. | Hiện chưa có tên hoặc link nên chưa đủ cơ sở kết luận các ứng dụng đã giải quyết được phần nào hay còn khoảng trống gì. | Tôi xác nhận chỉ nhớ các chức năng lên lịch và tự sắp xếp công việc. Tôi chưa nhớ tên và cần tìm lại nguồn; tôi cũng chưa trực tiếp phỏng vấn hoặc khảo sát. |
+| CP5 Quy trình | Tôi dùng AI đặt câu hỏi từng bước và hệ thống hóa luồng ứng dụng từ thông tin tôi cung cấp. Tôi cũng tham khảo ví dụ minh họa về quy trình làm video. | AI giúp làm rõ đầu vào, đầu ra, tiêu chí ưu tiên và người quyết định cuối cùng. | Các luồng hiện mới ở mức mô tả; chưa có bằng chứng kiểm thử và chưa có thời gian từng bước của quy trình nhóm. | Tôi bổ sung hạn nộp, độ phức tạp, thời gian dự kiến, mức độ quan trọng và trạng thái hoàn thành. Tôi làm rõ rằng AI đưa ra ít nhất 3 phương án và người dùng chọn cuối cùng. |
+| CP5–6 Problem Statement | Tôi dùng AI đặt câu hỏi để làm rõ đối tượng, khó khăn chung và phần tôi đã đóng góp. Chưa cung cấp trực tiếp bản v0 và v1 để AI phản biện. | AI giúp phân biệt vấn đề quá tải, khó xác định ưu tiên với tên ứng dụng và danh sách tính năng. | Chưa có nội dung v0 và v1 nên chưa thể kiểm tra đầy đủ metric, boundary và thay đổi giữa hai phiên bản. | Tôi xác định người dùng là sinh viên và người học chương trình nâng cao. Tôi làm rõ khó khăn là quá tải và không biết ưu tiên; đồng thời bổ sung trạng thái hoàn thành vào phần xác định ưu tiên. |
+| CP6 Mức can thiệp / quyết định | Tôi nhờ AI giải thích Rule, Workflow, Agent và đặt câu hỏi về vai trò AI, quyền quyết định của người dùng và quyết định hiện tại của nhóm. | AI giúp làm rõ vai trò đề xuất của hệ thống và quyền lựa chọn cuối cùng của người dùng. | Lý do “AI tổng hợp nhiều yếu tố để xếp ưu tiên” chưa đủ chứng minh cần Agent. Cần làm rõ khả năng tự chọn bước hoặc công cụ và so sánh với Workflow. | Tôi xác nhận nhóm chọn Agent, AI đưa ra ít nhất 3 phương án và người dùng chọn cuối cùng. Tôi cũng xác nhận quyết định hiện tại là cần kiểm chứng thêm — Not Yet. Lập luận lựa chọn Agent vẫn cần được nhóm bổ sung. |
+
+**Công cụ AI đã sử dụng:** Chỉ sử dụng AI trong cuộc trao đổi này để hỏi đáp, làm rõ thông tin, hỗ trợ soạn nháp và phản biện.
+
+**Thông tin còn cần bổ sung:** Nguồn research có thể kiểm tra, bằng chứng kiểm chứng với người dùng, cây OST, đối chiếu Problem Statement v0–v1 và lý do lựa chọn Agent thay cho mức đơn giản hơn.
 
 ---
-
 ## 6. Reflection (CP7)
 
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
