@@ -351,16 +351,25 @@ Success Metric dự kiến
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Người quản lý nhiều nhiệm vụ song song và đã gặp khó khăn khi chọn việc tiếp theo. Trong khảo sát CP4, 22/27 người báo gặp khó khăn ít nhất một lần trong 7 ngày; 13/27 gặp từ hai lần trở lên. Mẫu đa dạng vai trò, nên actor v0 cần được thu hẹp/kiểm chứng thêm theo nhóm người dùng cụ thể. |
+| **Quy trình** | Người dùng nhận task qua các kênh trao đổi hoặc công cụ quản lý, ghi nhớ/lưu thông tin ở các nơi khác nhau, tìm lại task đang mở và các yêu cầu liên quan, cân nhắc deadline và độ quan trọng, rồi tự chọn việc cần làm trước. Mô tả là tổng hợp quy trình hiện tại của nhóm; chưa được quan sát trực tiếp trên cùng một nhóm người dùng. |
+| **Bottleneck** | Khi có nhiều task đồng thời, người dùng khó xác định thứ tự ưu tiên và có thể mất thời gian cân nhắc. 12/27 phản hồi cho biết thời gian cân nhắc từ 6 phút trở lên. Tìm kiếm thông tin phân tán có thể góp phần nhưng chưa được tách riêng hoặc đo thời gian. |
+| **Impact** | Trong câu 7, 13/27 ghi nhận ít nhất một hậu quả như phải làm gấp, đổi kế hoạch, trễ task hoặc bỏ sót; câu 8 có 14/27 kể tình huống chọn chưa phù hợp. Đây là tự thuật, không chứng minh lựa chọn ưu tiên là nguyên nhân duy nhất hay trực tiếp. |
+| **Success Metric** (baseline → target, cách đo) | Baseline sơ bộ: 12/27 (44%) tự báo cân nhắc từ 6 phút trở lên trong 7 ngày. Target pilot: tối đa 6/27 (22%) khi hỏi lại cùng câu hỏi sau pilot. Đo bằng cùng câu hỏi và mốc hồi tưởng trước/sau; đồng thời cần bấm giờ trên cùng một task set để có baseline định lượng trực tiếp. |
+| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | AI chỉ đề xuất thứ tự và giải thích dựa trên dữ liệu người dùng cung cấp; phải nêu rõ dữ liệu thiếu/không chắc. AI không tự tạo/xác nhận task, sửa deadline/trạng thái, tự đổi lịch hay thực hiện hành động bên ngoài. Người dùng kiểm tra và xác nhận mỗi đề xuất trước khi áp dụng; có thể sửa, từ chối hoặc quay về tự sắp xếp thủ công. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+### Phản biện Problem Statement v0
 
--
+| Lỗ hổng được phản biện | Quan điểm của nhóm | Cách xử lý trong v0 |
+|---|---|---|
+| Mẫu khảo sát 27 người cho thấy tín hiệu nhưng chưa đại diện cho một actor cụ thể. | Đồng ý. | Ghi rõ nhóm người tham gia đa dạng; chưa khái quát cho mọi người quản lý nhiều task. CP6/pilot cần tuyển đúng nhóm thường xuyên gặp khó khăn. |
+| Chưa có số đo trực tiếp thời gian từng bước; các câu trả lời là tự thuật. | Đồng ý. | Không gán số phút cho quy trình; dùng 12/27 ở mức baseline sơ bộ và bổ sung đo thời gian trên cùng task set. |
+| Chưa tách được khó khăn do tìm task khỏi khó khăn do quyết định ưu tiên. | Đồng ý. | Giữ chọn task tiếp theo là bottleneck chính; coi tìm kiếm/tổng hợp là yếu tố liên quan cần đo riêng. |
+| Chưa có bằng chứng AI tốt hơn Rule hoặc cách thủ công. | Đồng ý; AI hiện chỉ là giả thuyết trong To-Be. | CP6 so sánh No AI, Rule, Workflow và Agent; không xem việc đưa AI vào sơ đồ là kết luận về mức can thiệp. |
+| Baseline/target chưa phải metric hành vi đáng tin cậy. | Đồng ý. | Nêu rõ phép đo tự thuật, đặt target thử nghiệm tạm thời và bổ sung bấm giờ trước khi kết luận. |
+| Đề xuất sai có thể khiến người dùng ưu tiên nhầm. | Đồng ý. | Bắt buộc giải thích, HITL ở mỗi lần áp dụng, và cho phép từ chối/fallback thủ công. |
+
+**Kết luận sau phản biện:** Nhóm giữ vấn đề khó chọn thứ tự ưu tiên giữa nhiều nhiệm vụ làm trọng tâm, nhưng chỉ xem bằng chứng CP4 là tín hiệu ban đầu. AI là một phương án cần được so sánh với cách thủ công và Rule; người dùng vẫn nắm quyết định cuối cùng.
 
 ---
 
