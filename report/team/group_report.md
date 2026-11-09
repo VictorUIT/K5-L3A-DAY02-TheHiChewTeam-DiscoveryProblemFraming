@@ -16,59 +16,80 @@
 
 ### 2.1. Pitch
 
-| # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
+| # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | [Nguyễn Bình An](../individual/2A202603606_NguyenBinhAn.md) | Khi xếp thời khóa biểu đầu học kỳ, tôi muốn nhanh chóng xử lý xung đột và phân bổ chưa hợp lý, để giảm chỉnh sửa thủ công và đáp ứng yêu cầu giảng dạy. | Người phụ trách xếp thời khóa biểu tại trường học. | Rà soát và chỉnh sửa thủ công, ước lượng mỗi bước 30 phút/lần. | Xung đột lịch do dữ liệu đầu vào hay quy tắc xếp lịch? (Ho Quoc Toan hỏi.) |
+| 2 | [Vũ Đức Thắng](../individual/2A202603601_VuDucThang.md) | Khi tổng kết cuối tháng, tôi muốn biết tiền đã chi vào những nhóm nào, để hiểu nguyên nhân vượt ngân sách. | Cá nhân, sinh viên, người đi làm, gia đình. | Ghi chép và phân loại giao dịch; giả định 20–40 phút/ngày. | Ghi chép theo mẫu có đủ để kiểm soát chi tiêu không? (Nguyen Duc Minh hỏi.) |
+| 3 | [Trần Quốc Tuấn Khanh](../individual/2A202603625_TranQuocTuanKhanh.md) | Khi bắt đầu ngày làm việc, tôi muốn xác định việc cấp thiết cần giải quyết, để tập trung đúng trọng tâm. | Technical Lead và thành viên phát triển. | Gom và đánh giá thông tin từ nhiều kênh để chọn task; chưa có số phút cụ thể. | Nếu hai task cùng gấp, bạn chọn theo tiêu chí nào? (Nguyễn Bình An hỏi.) |
+| 4 | [Nguyen Duc Minh](../individual/2A202603633_NguyenDucMinh.md) | Khi nhận bài từ nhiều môn, tôi muốn tổng hợp các hạn nộp, để tránh quên bài tập quan trọng. | Sinh viên đại học học nhiều môn cùng học kỳ. | Tìm và ghi deadline từ nhiều nguồn; ước tính 15–25 phút/tuần. | Quên deadline do thiếu công cụ hay không cập nhật thường xuyên? (Trần Quốc Tuấn Khanh hỏi.) |
+| 5 | [Ho Quoc Toan](../individual/2A202603668-HoQuocToan.md) | Khi gặp thuật ngữ hoặc từ tiếng Anh chưa hiểu, tôi muốn hiểu nghĩa trong ngữ cảnh, để theo kịp bài giảng và tài liệu chuyên ngành. | Sinh viên chuyên ngành AI. | Dừng tra nghĩa khoảng 2 phút/từ, làm gián đoạn tập trung. | Bạn kiểm tra nghĩa thuật ngữ đúng ngữ cảnh bằng cách nào? (Chu Thân Nhất hỏi.) |
+| 6 | [Chu Thân Nhất](../individual/2A202603649_ChuThanNhat.md) | Khi mở kênh YouTube hoặc tìm ý tưởng video, tôi muốn nhanh chóng nghiên cứu đối thủ và xu hướng, để chọn chủ đề có tiềm năng thu hút người xem. | Nhà sáng tạo nội dung, người quản lý kênh và nhóm sản xuất video. | Chuyển giữa nhiều kênh, thu thập và so sánh dữ liệu thủ công; ước tính 2–3 ngày với người có kinh nghiệm, khoảng 1 tuần với người mới. | Bạn nhận biết video đang tăng trưởng dựa vào chỉ số nào? (Vũ Đức Thắng hỏi.) |
 
 ### 2.2. Cluster
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A – Theo dõi và tổng quan công việc | Khó theo dõi toàn bộ task từ nhiều nguồn; dễ quên nhiệm vụ cũ khi nhận nhiệm vụ mới. | Thiếu góc nhìn tổng thể về công việc đang thực hiện, trạng thái và deadline. |
+| B – Ưu tiên và lựa chọn công việc | Khó quyết định nên làm task nào trước; chưa rõ mức độ quan trọng và khẩn cấp của từng nhiệm vụ (giả thuyết). | Khó xác định thứ tự ưu tiên khi có nhiều task cùng lúc. |
+| C – Hỗ trợ thực hiện công việc | Chưa biết cách bắt đầu hoặc lựa chọn phương pháp, công cụ phù hợp để hoàn thành task (giả thuyết). | Cần định hướng và nguồn lực trong quá trình thực hiện nhiệm vụ. |
+| D – Duy trì tập trung và động lực | Dễ mất tập trung, thiếu động lực hoặc khó duy trì thói quen hoàn thành công việc (giả thuyết). | Khó duy trì sự tập trung và tính liên tục khi làm task. |
+| E – Đánh giá tiến độ và điều chỉnh kế hoạch | Khó xác định mức độ hoàn thành, thời gian còn lại và thời điểm nên tạm dừng để chuyển task (giả thuyết). | Thiếu thông tin để đánh giá tiến độ và điều chỉnh kế hoạch kịp thời. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
-
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm bỏ sót nhiệm vụ và cải thiện khả năng hoàn thành đúng hạn
+         của người phải quản lý nhiều task song song.
+│
+├── Opportunity A: Khó nắm bắt tổng quan công việc
+│   Task nằm ở nhiều nguồn; dễ quên nhiệm vụ cũ khi nhận nhiệm vụ mới.
+│
+│
+├── Opportunity B: Khó xác định thứ tự ưu tiên
+│   Chưa biết nên thực hiện công việc nào trước khi có nhiều task.
+│
+├── Opportunity C: Khó bắt đầu và thực thi task
+│   Khó xác định cách thực hiện hoặc lựa chọn công cụ phù hợp.
+│
+├── Opportunity D: Khó duy trì tập trung và động lực
+│   Bị phân tâm hoặc thiếu động lực với nhiệm vụ kéo dài.
+│
+└── Opportunity E: Khó đánh giá và điều chỉnh tiến độ
+    Chưa rõ mức độ hoàn thành, thời gian còn lại và khi nào nên chuyển task.
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
--
+- ~~Xây dựng dashboard tổng quan task~~ → Giải pháp cho Opportunity A.
+- ~~AI quyết định task nên làm~~ → Giải pháp dự kiến cho Opportunity B.
+- ~~AI gợi ý cách làm và công cụ~~ → Giải pháp dự kiến cho Opportunity C.
+- ~~Hệ thống phần thưởng như Duolingo~~ → Giải pháp dự kiến cho Opportunity D.
+- ~~Tự động tính % hoàn thành và đề xuất pending~~ → Giải pháp dự kiến cho Opportunity E.
 
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| A – Theo dõi và quản lý task | 5 | 4 | 5 | 3 | 5 | 5 | 5 | **32** |
+| B – Xác định thứ tự ưu tiên task | 5 | 5 | 5 | 3 | 5 | 5 | 5 | **33** |
+| C – Hỗ trợ thực hiện task | 5 | 4 | 5 | 3 | 5 | 5 | 5 | **32** |
+| D – Duy trì tập trung và động lực | 4 | 3 | 3 | 2 | 3 | 3 | 2 | **20** |
+| E – Đánh giá tiến độ và điều chỉnh kế hoạch | 5 | 5 | 4 | 4 | 5 | 5 | 5 | **33** |
 
-**Candidate được chọn:**
+**Candidate được chọn:** B – Khó xác định thứ tự ưu tiên giữa nhiều nhiệm vụ (33/35 điểm).
 
 **Vì sao chọn:**
 
+B đạt 33/35 điểm, đồng hạng cao nhất với E. Nhóm chọn tập trung vào quyết định “nên làm task nào tiếp theo” khi các nhiệm vụ có deadline, độ quan trọng và mức độ khẩn cấp khác nhau. Phạm vi này cụ thể, vừa sức lab và có thể so sánh các cách giải quyết từ quy tắc ưu tiên đơn giản đến AI hỗ trợ.
+
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+- **A – Theo dõi và quản lý task (32/35):** Tập trung vào tổng hợp thông tin công việc. Nhóm ưu tiên nghiên cứu bước lựa chọn task sau khi đã nắm danh sách; A có thể hỗ trợ B.
+- **C – Hỗ trợ thực hiện task (32/35):** Mỗi công việc cần phương pháp và công cụ khác nhau, khiến phạm vi khó giới hạn trong thời gian lab.
+- **D – Duy trì tập trung và động lực (20/35):** Điểm thấp nhất, quy trình chưa rõ, tác động khó đo và nhóm ít am hiểu domain hơn các candidate khác.
+- **E – Đánh giá tiến độ và điều chỉnh kế hoạch (33/35):** Đồng điểm với B, nhưng đánh giá mức độ hoàn thành và thời gian còn lại phụ thuộc nhiều dữ liệu khó chuẩn hóa. B dễ thu hẹp vào việc chọn thứ tự từ thông tin đã biết hơn.
+
+**Xử lý bất đồng (nếu có):** Không có bất đồng. 100% thành viên thống nhất chọn B để tiếp tục nghiên cứu và kiểm chứng.
 
 ---
 
