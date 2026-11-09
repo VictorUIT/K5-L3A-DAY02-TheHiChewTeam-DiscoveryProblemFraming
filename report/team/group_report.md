@@ -387,9 +387,6 @@ Các phần trăm, thời lượng và quy mô thử ở mục 7–8 là **mục
 **Phương án thay thế:** Tiếp tục danh sách task tập trung, kiểm tra dữ liệu, lọc theo Rule và sắp xếp thủ công như fallback của CP5. Nếu cách này đủ đáp ứng, không cần nâng lên AI hoặc Agent.
 
 ---
-## 9. Hạn chế và hướng tiếp theo
-
----
 
 ## 9. Hạn chế và hướng tiếp theo
 Hạn chế của quá trình nghiên cứu và phương án đề xuất:
