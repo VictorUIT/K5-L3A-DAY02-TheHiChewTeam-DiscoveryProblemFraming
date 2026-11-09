@@ -156,35 +156,52 @@ Problem sau đối chiếu: Người quản lý nhiều nhiệm vụ, thường 
 
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
+Bối cảnh
+Đối tượng nghiên cứu là những người phải quản lý và thực hiện nhiều công việc cùng lúc, chẳng hạn người làm nhiều công việc, nhân viên tham gia nhiều dự án hoặc sinh viên vừa học vừa làm.
+
+Các nhiệm vụ được giao thông qua nhiều nguồn như Zalo, Messenger, Telegram, Discord, email hoặc các công cụ quản lý công việc. Thông tin về deadline, yêu cầu, mức độ quan trọng và tiến độ có thể nằm rải rác ở những nguồn khác nhau.
+
+Trong quy trình hiện tại được ghi nhận từ trải nghiệm người dùng, việc theo dõi nhiệm vụ chủ yếu dựa vào trí nhớ và việc đọc lại tin nhắn. Khi tiếp nhận nhiệm vụ mới, người dùng có thể bỏ quên những nhiệm vụ cũ hoặc khó xác định công việc nào cần được ưu tiên.
+
 ```
 flowchart TD
-    S1["S1. Nhận bài/việc mới<br/>LMS, nhóm chat, email, giảng viên"]
-    S2["S2. Thông tin được giữ nguyên<br/>trong từng nguồn riêng lẻ"]
-    S3["S3. Người học nhớ và chọn bài<br/>dựa trên trí nhớ"]
-    S4["S4. Tìm lại yêu cầu và hạn nộp<br/>trong nguồn tương ứng"]
-    S5["Bắt đầu thực hiện bài/việc"]
+    A["1. Tiếp nhận nhiệm vụ từ nhiều nguồn<br/>Chat, email, công cụ quản lý"]
+    B["2. Ghi nhớ hoặc theo dõi task riêng lẻ<br/>Thông tin chưa được tổng hợp đầy đủ"]
+    C["3. Kiểm tra các nhiệm vụ đang có<br/>Nhớ task cũ, tìm lại thông tin"]
+    D["4. Xem deadline, yêu cầu<br/>và mức độ quan trọng"]
+    E["5. So sánh và quyết định<br/>task cần làm trước"]
+    F["6. Thực hiện công việc đã chọn"]
+    G{"Có task mới<br/>phát sinh?"}
+    H(["Tiếp tục thực hiện kế hoạch"])
 
-    S1 --> S2 --> S3 --> S4 --> S5
+    A --> B --> C --> D --> E --> F --> G
+    G -->|Có| A
+    G -->|Không| H
 
-    style S3 fill:#fff2cc,stroke:#d6a500
-    style S4 fill:#f4cccc,stroke:#cc0000
+    classDef bottleneck fill:#fff0d9,stroke:#c57b13,color:#633d0b,stroke-width:2px
+    class E bottleneck
 
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 |Người học |Thông báo giao bài, yêu cầu của giảng viên, hạn nộp | Biết có bài tập/công việc mới|Chưa đo |Thông tin đến từ LMS, nhóm chat, email và giảng viên trên lớp. |
-| 2 |Người học |Thông tin từ các nguồn khác nhau | Thông tin vẫn nằm phân tán trong từng nguồn | Chưa đo|Chưa có danh sách chung để tổng hợp bài tập và công việc.|
-| 3 |Người học | Những bài tập/công việc còn nhớ|Một bài được chọn để thực hiện |Khoảng 2 phút/lần chọn|Quyết định chủ yếu dựa vào trí nhớ, chưa có cơ chế xếp hạng ưu tiên |
-| 4 |Người học|Bài tập/công việc đã chọn | Tìm được yêu cầu và hạn nộp để bắt đầu làm|Khoảng 10 phút/lần tìm |Phải truy cập lại nguồn tương ứng để tìm thông tin. |
-| 5 |Người học |Yêu cầu và hạn nộp đã tìm được | Có đủ thông tin để bắt đầu làm bài/việc|Chưa đo |Chưa có dữ liệu về thời gian hoàn thành hoặc hiệu quả của bước này. |
+| 1 | Người quản lý nhiều công việc|Thông báo, tin nhắn, email và yêu cầu từ người giao việc | Nhận biết có nhiệm vụ mới cần thực hiện| Chưa đo|Nhiệm vụ phát sinh từ nhiều nguồn |
+| 2 | Người dùng| Những nhiệm vụ đã tiếp |Thông tin nhiệm vụ được ghi nhớ hoặc lưu tại từng nguồn |Chưa đo |Chưa có danh sách tổng hợp đầy đủ trong quy trình được mô tả |
+| 3 | Người dùng| Trí nhớ, tin nhắn cũ, email hoặc danh sách công việc đang có|Xác định những nhiệm vụ còn phải thực hiện |Chưa đo; được người dùng mô tả là tốn thời gian | Có nguy cơ bỏ sót nhiệm vụ|
+| 4 |Người dùng |Deadline, yêu cầu, độ quan trọng và thông tin liên quan | Thông tin phục vụ việc lựa chọn thứ tự ưu tiên| Chưa đo|Một số thông tin có thể thiếu hoặc cần tìm lại |
+| 5 | Người dùng| Danh sách nhiệm vụ và thông tin đã thu thập| Quyết định nhiệm vụ cần thực hiện trước|Chưa đo; có thể mất thời gian cân nhắc |Bottleneck nghiên cứu của Candidate B |
+| 6 | Người dùng| Nhiệm vụ được lựa chọn|Bắt đầu hoặc tiếp tục thực hiện công việc |Chưa đo | Thứ tự công việc có thể thay đổi khi phát sinh nhiệm vụ mới|
 
 **Bottleneck chính:**
-Thông tin bị phân tán: Bài tập và công việc nằm ở nhiều nguồn khác nhau (LMS, nhóm chat, email, thông báo trực tiếp), chưa được tổng hợp thành một danh sách thống nhất.
+Bottleneck được nhóm tập trung nghiên cứu là việc xác định thứ tự ưu tiên giữa nhiều nhiệm vụ khi thông tin chưa được tổng hợp đầy đủ và các yếu tố ưu tiên chưa được đánh giá một cách nhất quán.
 
-Phụ thuộc vào trí nhớ: Người học lựa chọn công việc dựa trên những gì còn nhớ, dẫn đến nguy cơ bỏ sót nhiệm vụ hoặc lựa chọn sai thứ tự ưu tiên.
+Khi nhiều nhiệm vụ cùng tồn tại, người dùng phải tự cân nhắc deadline, mức độ quan trọng, thời gian dự kiến, mức độ hoàn thành và những yêu cầu phát sinh. Việc đánh giá phụ thuộc vào trí nhớ, thông tin thu thập được và kinh nghiệm cá nhân.
 
-Mất thời gian tìm kiếm: Việc tìm lại yêu cầu và hạn nộp mất khoảng 10 phút mỗi lần. Nếu tính cả thời gian lựa chọn công việc (khoảng 2 phút), tổng thời gian ước tính là 12 phút cho một lượt có cả hai công đoạn.
+Ngoài ra, việc phải tìm lại yêu cầu công việc từ nhiều nguồn có thể khiến quá trình ra quyết định mất thêm thời gian và dễ bỏ sót thông tin quan trọng.
+
+Dữ liệu tự thuật đã ghi nhận tình trạng quên nhiệm vụ khi chuyển giữa các công việc, làm phát sinh nhu cầu tìm lại yêu cầu và phải làm gấp để kịp deadline. Nhóm cũng cho biết đã tiến hành thu thập bổ sung thông tin ở CP4.
+
+Giới hạn bằng chứng: Hiện chưa có số liệu bấm giờ đáng tin cậy cho từng bước và tổng thời gian của quy trình. Chưa đủ cơ sở kết luận bước lựa chọn ưu tiên là bước mất nhiều phút nhất hoặc là nguyên nhân trực tiếp của mọi trường hợp trễ hạn.
 
 ### 4.2. Quy trình tương lai
 
@@ -198,11 +215,21 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
 |---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Số bước |6 bước |6 bước |Quy trình không nhất thiết giảm số bước, nhưng thay đổi cách xử lý và mức độ hỗ trợ |
+| Tổng thời gian |Chưa có số liệu đo thực tế; người dùng ghi nhận việc tìm kiếm và cân nhắc mất thời gian |Kỳ vọng giảm so với quy trình hiện tại; chưa xác định số phút cụ thể | Cần đo baseline và thử nghiệm mới xác định mức cải thiện|
+| Số bước thủ công | 6/6 bước|3/6 bước (bước 1, 5 và 6) |Bước 2–4 do Rule/AI hỗ trợ; bước 6 còn cần người dùng cập nhật tiến độ |
+| Bottleneck chính |Khó lựa chọn task ưu tiên khi thông tin phân tán và phải tự cân nhắc nhiều yếu tố |Kiểm tra, đánh giá mức độ phù hợp của phương án AI đề xuất | Bottleneck tương lai chưa được kiểm chứng|
+| Rủi ro mới phát sinh |Quên task, thiếu thông tin, lựa chọn ưu tiên chưa nhất quán |AI đề xuất sai, dữ liệu đầu vào thiếu, người dùng phụ thuộc quá mức vào hệ thống |Kiểm soát bằng giải thích đề xuất, xác nhận thủ công và Fallback |
+
+Success Metric dự kiến
+
+| Chỉ số | Baseline | Target | Cách đo | 
+|---:|---|---|---|
+| 1 |Thời gian xác định thứ tự ưu tiên |Chưa đo; người dùng cho biết quá trình này có thể mất thời gian |Giảm so với baseline sau khi đo; ngưỡng cụ thể cần nhóm chốt | Bấm giờ từ khi bắt đầu xem danh sách task đến khi xác nhận thứ tự ưu tiên |
+| 2 | Thời gian tìm kiếm lại thông tin nhiệm vụ| Chưa đo; được phản ánh là tốn thời gian| Giảm so với baseline sau khi đo| Bấm giờ từ lúc bắt đầu tìm đến khi tìm đúng thông tin|
+| 3 |Tỷ lệ task bị bỏ sót |Chưa có baseline định lượng đáng tin cậy cho nhóm người dùng mục tiêu |Giảm so với baseline sau kiểm chứng | Theo dõi số task bỏ sót trên tổng số task được giao trong một khoảng thời gian|
+| 4 |Tỷ lệ task hoàn thành đúng hạn |Chưa xác định | Cải thiện so với baseline| Đối chiếu thời hạn và thời điểm hoàn thành thực tế|
+| 5 |Mức độ phù hợp của thứ tự AI đề xuất | Chưa có vì chưa thử nghiệm AI|Cần xác định qua thử nghiệm với người dùng |Ghi nhận tỷ lệ đề xuất được chấp nhận và lý do điều chỉnh |
 
 ---
 
@@ -320,8 +347,30 @@ Vì sao:
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
+Hạn chế của quá trình nghiên cứu và phương án đề xuất:
 
--
+1. Thiếu số liệu thời gian đo trực tiếp. Người dùng đã phản ánh việc tìm lại thông tin và quyết định thứ tự ưu tiên mất thời gian, nhưng nhóm chưa có số phút đáng tin cậy cho từng bước hoặc toàn bộ quy trình. Vì vậy, chưa thể kết luận hệ thống sẽ tiết kiệm bao nhiêu thời gian hay sử dụng các mốc 60 phút → 15/20 phút làm kết quả thực tế.
+   
+2. Bằng chứng về tác động chưa xác lập quan hệ nhân quả. Việc quên task, phải tìm lại yêu cầu hoặc làm gấp đã xuất hiện trong trải nghiệm người dùng. Tuy nhiên, chưa thể khẳng định tất cả những tình huống đó đều do xác định sai thứ tự ưu tiên; thông tin phân tán và cách theo dõi task cũng có thể đóng góp vào vấn đề.
+
+3. Khả năng khái quát hóa còn hạn chế. Actor mục tiêu bao gồm người quản lý nhiều công việc cùng lúc, nhưng nhu cầu của từng nhóm (người làm nhiều dự án, sinh viên vừa học vừa làm, nhân viên văn phòng...) có thể khác nhau. Những dữ liệu thu thập tại CP4 cần được đối chiếu theo nguồn và cách lấy mẫu trước khi suy rộng cho toàn bộ đối tượng.
+
+4. Quy trình To-Be mới là thiết kế, chưa được kiểm nghiệm. Nhóm chưa đo thời gian nhập liệu, kiểm tra thông tin, AI phân tích, người dùng duyệt và cập nhật tiến độ; do đó chưa biết phần thời gian tiết kiệm có đủ bù cho công nhập liệu và kiểm tra đề xuất hay không.
+
+5. Chất lượng AI phụ thuộc dữ liệu đầu vào. Task có thể thiếu deadline, độ quan trọng, thời gian dự kiến hoặc quan hệ phụ thuộc. AI có nguy cơ đánh giá sai mức khẩn cấp, bỏ sót ràng buộc hoặc tạo lý do không có căn cứ. Hệ thống cần báo thiếu dữ liệu, giải thích đề xuất, cho phép sửa thủ công và không tự áp dụng quyết định.
+
+6. Tính khả thi tích hợp và bảo mật chưa được xác nhận. Việc thu thập dữ liệu từ Zalo, Messenger, Telegram, email hay các công cụ quản lý phụ thuộc quyền truy cập và khả năng tích hợp của từng nền tảng. Nội dung task có thể chứa dữ liệu cá nhân/nội bộ nên không mặc định được phép chuyển sang mô hình AI bên ngoài.
+
+7. Chưa chứng minh giá trị tăng thêm của AI so với Rule. Phân tích đa yếu tố và đề xuất theo ngữ cảnh là định hướng nhóm lựa chọn, nhưng mức hiệu quả cần được kiểm tra trên cùng bộ task so với checklist hoặc quy tắc ưu tiên đơn giản. Workflow có AI là phương án để thử nghiệm, không phải kết quả đã được xác nhận là tối ưu.
+
+Hướng tiếp theo:
+
+* Đo baseline thực tế: Theo dõi các lượt xác định thứ tự ưu tiên của người dùng, bấm giờ từng công đoạn và toàn quy trình, đồng thời ghi nhận task bị bỏ sót hoặc trễ hạn. Không tính các câu trả lời mô phỏng thành dữ liệu khảo sát thực tế.
+* Thử nghiệm pilot quy mô nhỏ: Dùng danh sách task thực tế đã được người tham gia cho phép sử dụng; so sánh hai phương án Rule/checklist và Workflow có AI đề xuất ưu tiên trên các trường hợp tương đương, có cả task phát sinh hoặc deadline xung đột.
+* Đánh giá đầu ra và trải nghiệm: Kiểm tra AI có bỏ sót task, làm sai deadline, suy diễn dữ liệu hay không; ghi nhận lý do người dùng thay đổi thứ tự gợi ý, thời gian toàn quy trình và tỷ lệ hoàn thành đúng hạn. Chốt ngưỡng thành công trước khi pilot.
+* Kiểm soát quyền riêng tư và phạm vi hệ thống: Chỉ dùng dữ liệu được cấp quyền, ưu tiên nhập thủ công ở pilot; xác minh khả năng tích hợp từng nền tảng trước khi triển khai tự động. Người dùng luôn duyệt kết quả cuối cùng; khi AI không phù hợp thì quay về Rule hoặc sắp xếp thủ công.
+* Ra quyết định sau thử nghiệm: Dựa trên kết quả đo để tiếp tục Workflow có AI, tinh chỉnh quy tắc, hoặc chỉ duy trì giải pháp No AI/Rule nếu AI không đem lại lợi ích đủ rõ.
+
 
 ## 10. Tài liệu tham khảo
 
