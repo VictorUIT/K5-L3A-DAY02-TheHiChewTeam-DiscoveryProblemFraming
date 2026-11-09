@@ -149,19 +149,35 @@ Tổng hợp:
 
 Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
 
-```text
+```
+flowchart TD
+    S1["S1. Nhận bài/việc mới<br/>LMS, nhóm chat, email, giảng viên"]
+    S2["S2. Thông tin được giữ nguyên<br/>trong từng nguồn riêng lẻ"]
+    S3["S3. Người học nhớ và chọn bài<br/>dựa trên trí nhớ"]
+    S4["S4. Tìm lại yêu cầu và hạn nộp<br/>trong nguồn tương ứng"]
+    S5["Bắt đầu thực hiện bài/việc"]
+
+    S1 --> S2 --> S3 --> S4 --> S5
+
+    style S3 fill:#fff2cc,stroke:#d6a500
+    style S4 fill:#f4cccc,stroke:#cc0000
 
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1 |Người học |Thông báo giao bài, yêu cầu của giảng viên, hạn nộp | Biết có bài tập/công việc mới|Chưa đo |Thông tin đến từ LMS, nhóm chat, email và giảng viên trên lớp. |
+| 2 |Người học |Thông tin từ các nguồn khác nhau | Thông tin vẫn nằm phân tán trong từng nguồn | Chưa đo|Chưa có danh sách chung để tổng hợp bài tập và công việc.|
+| 3 |Người học | Những bài tập/công việc còn nhớ|Một bài được chọn để thực hiện |Khoảng 2 phút/lần chọn|Quyết định chủ yếu dựa vào trí nhớ, chưa có cơ chế xếp hạng ưu tiên |
+| 4 |Người học|Bài tập/công việc đã chọn | Tìm được yêu cầu và hạn nộp để bắt đầu làm|Khoảng 10 phút/lần tìm |Phải truy cập lại nguồn tương ứng để tìm thông tin. |
+| 5 |Người học |Yêu cầu và hạn nộp đã tìm được | Có đủ thông tin để bắt đầu làm bài/việc|Chưa đo |Chưa có dữ liệu về thời gian hoàn thành hoặc hiệu quả của bước này. |
 
 **Bottleneck chính:**
+Thông tin bị phân tán: Bài tập và công việc nằm ở nhiều nguồn khác nhau (LMS, nhóm chat, email, thông báo trực tiếp), chưa được tổng hợp thành một danh sách thống nhất.
+
+Phụ thuộc vào trí nhớ: Người học lựa chọn công việc dựa trên những gì còn nhớ, dẫn đến nguy cơ bỏ sót nhiệm vụ hoặc lựa chọn sai thứ tự ưu tiên.
+
+Mất thời gian tìm kiếm: Việc tìm lại yêu cầu và hạn nộp mất khoảng 10 phút mỗi lần. Nếu tính cả thời gian lựa chọn công việc (khoảng 2 phút), tổng thời gian ước tính là 12 phút cho một lượt có cả hai công đoạn.
 
 ### 4.2. Quy trình tương lai
 
